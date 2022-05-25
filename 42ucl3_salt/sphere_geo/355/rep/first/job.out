@@ -1,0 +1,1503 @@
+
+  _                   .-=-.           .-=-.          .-==-.       
+ { }      __        .' O o '.       .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `._____.'       `.____.'              
+
+Serpent 2 beta
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 2.1.32 (February 24, 2021) -- Contact: serpent@vtt.fi
+
+ - Reference: J. Leppanen, et al. "The Serpent Monte Carlo code: Status,
+              development and applications in 2013." Ann. Nucl. Energy,
+              82 (2015) 142-150.
+
+ - Compiled Feb 24 2021 13:50:53
+
+ - MPI Parallel calculation mode available
+
+ - OpenMP Parallel calculation mode available
+
+ - Geometry and mesh plotting available
+
+ - Default data path set to: "/opt/serpent/xsdata"
+
+ - Full command used to run Serpent:
+
+   sss2 -omp 8 msfr
+
+Begin calculation on Mon Jan 17 14:00:36 2022 at node12
+
+Reading input file "msfr"...
+
+Checking duplicate input definitions...
+OK.
+
+Dividing burnable materials...
+OK.
+
+Creating geometry...
+OK.
+
+Counting geometry zones...
+
+Processing cells...
+OK.
+
+Linking materials to geometry...
+OK.
+
+Processing detector definitions...
+Allocating RESMAT matrices and associated arrays...
+OK.
+
+Counting cells...
+OK.
+
+Reading ACE directory files...
+OK.
+
+Reading radioactive decay data files...
+
+***** Mon Jan 17 14:00:37 2022 (seed = 1642446036481)
+Warning message from function ReadDecayFile:
+
+Sum of decay branching ratios is 0.450000 (ZAI = 771690)
+
+
+***** Mon Jan 17 14:00:37 2022 (seed = 1642446036481)
+Warning message from function ReadDecayFile:
+
+Sum of decay branching ratios is 0.940000 (ZAI = 791730)
+
+
+***** Mon Jan 17 14:00:37 2022 (seed = 1642446036481)
+Warning message from function ReadDecayFile:
+
+Sum of decay branching ratios is 0.910000 (ZAI = 1022510)
+
+
+***** Mon Jan 17 14:00:37 2022 (seed = 1642446036481)
+Warning message from function ReadDecayFile:
+
+Sum of decay branching ratios is 0.850000 (ZAI = 1022570)
+
+OK.
+
+Reading neutron-induced fission yields...
+OK.
+
+Adding nuclides in material fuelsalt...
+
+Nuclide  11023.09c -- sodium 23 at 900K (Na-23)
+Nuclide  17035.09c -- chlorine 35 at 900K (Cl-35)
+Nuclide  17037.09c -- chlorine 37 at 900K (Cl-37)
+Nuclide  92234.09c -- uranium 234 at 900K (U-234)
+Nuclide  92235.09c -- uranium 235 at 900K (U-235)
+Nuclide  92236.09c -- uranium 236 at 900K (U-236)
+Nuclide  92238.09c -- uranium 238 at 900K (U-238)
+Nuclide   2004.09c -- helium 4 at 900K (He-4)
+
+Adding nuclides in material U_stock...
+
+Adding nuclides in material offgastankcore...
+
+Adding nuclides in material overflow...
+
+Adding nuclides in material refl...
+
+Nuclide   6000.06c -- natural carbon at 873K (C-nat)
+Nuclide  14028.06c -- silicon 28 at 873K (Si-28)
+Nuclide  14029.06c -- silicon 29 at 873K (Si-29)
+Nuclide  14030.06c -- silicon 30 at 873K (Si-30)
+Nuclide  15031.06c -- phosphorus 31 at 873K (P-31)
+Nuclide  16032.06c -- sulfur 32 at 873K (S-32)
+Nuclide  16033.06c -- sulfur 33 at 873K (S-33)
+Nuclide  16034.06c -- sulfur 34 at 873K (S-34)
+Nuclide  16036.06c -- sulfur 36 at 873K (S-36)
+Nuclide  25055.06c -- manganese 55 at 873K (Mn-55)
+Nuclide  26054.06c -- iron 54 at 873K (Fe-54)
+Nuclide  26056.06c -- iron 56 at 873K (Fe-56)
+Nuclide  26057.06c -- iron 57 at 873K (Fe-57)
+Nuclide  26058.06c -- iron 58 at 873K (Fe-58)
+
+Adding activation products...
+
+Nuclide  11022.09c -- sodium 22 at 900K (Na-22)
+Nuclide  10021.09c -- neon 21 at 900K (Ne-21)
+Nuclide  10020.09c -- neon 20 at 900K (Ne-20)
+Nuclide   9019.09c -- fluorine 19 at 900K (F-19)
+Nuclide   8016.09c -- oxygen 16 at 900K (O-16)
+Nuclide   7015.09c -- nitrogen 15 at 900K (N-15)
+Nuclide   1001.09c -- hydrogen at 900K (H-1)
+Nuclide   8017.09c -- oxygen 17 at 900K (O-17)
+Nuclide   1002.09c -- deuterium at 900K (H-2)
+Nuclide   7014.09c -- nitrogen 14 at 900K (N-14)
+Nuclide   1003.09c -- tritium at 900K (H-3)
+Nuclide   6013.09c -- carbon 13 at 900K (C-13)
+Nuclide   4009.09c -- beryllium 9 at 900K (Be-9)
+Nuclide   8018.09c -- oxygen 18 at 900K (O-18)
+Nuclide   5011.09c -- boron 11 at 900K (B-11)
+Nuclide   2003.09c -- helium 3 at 900K (He-3)
+Nuclide   3007.09c -- lithium 7 at 900K (Li-7)
+Nuclide  10022.09c -- neon 22 at 900K (Ne-22)
+Nuclide   5010.09c -- boron 10 at 900K (B-10)
+Nuclide   3006.09c -- lithium 6 at 900K (Li-6)
+Nuclide  12024.09c -- magnesium 24 at 900K (Mg-24)
+Nuclide  12025.09c -- magnesium 25 at 900K (Mg-25)
+Nuclide  12026.09c -- magnesium 26 at 900K (Mg-26)
+Nuclide  12027.09c -- magnesium 27 at 900K (Mg-27)
+Nuclide  13027.09c -- aluminum 27 at 900K (Al-27)
+Nuclide  16034.09c -- sulfur 34 at 900K (S-34)
+Nuclide  16033.09c -- sulfur 33 at 900K (S-33)
+Nuclide  16032.09c -- sulfur 32 at 900K (S-32)
+Nuclide  15031.09c -- phosphorus 31 at 900K (P-31)
+Nuclide  14028.09c -- silicon 28 at 900K (Si-28)
+Nuclide  14029.09c -- silicon 29 at 900K (Si-29)
+Nuclide  13026.09c -- aluminum 26 at 900K (Al-26)
+Nuclide  14030.09c -- silicon 30 at 900K (Si-30)
+Nuclide  15032.09c -- phosphorus 32 at 900K (P-32)
+Nuclide  14031.09c -- silicon 31 at 900K (Si-31)
+Nuclide  15033.09c -- phosphorus 33 at 900K (P-33)
+Nuclide  14032.09c -- silicon 32 at 900K (Si-32)
+Nuclide  16035.09c -- sulfur 35 at 900K (S-35)
+Nuclide  16036.09c -- sulfur 36 at 900K (S-36)
+Nuclide  17036.09c -- chlorine 36 at 900K (Cl-36)
+Nuclide  18038.09c -- argon 38 at 900K (Ar-38)
+Nuclide  18037.09c -- argon 37 at 900K (Ar-37)
+Nuclide  18036.09c -- argon 36 at 900K (Ar-36)
+Nuclide  18039.09c -- argon 39 at 900K (Ar-39)
+Nuclide  18040.09c -- argon 40 at 900K (Ar-40)
+Nuclide  19039.09c -- potassium 39 at 900K (K-39)
+
+Adding actinide data...
+
+Nuclide  90227.09c -- thorium 227 at 900K (Th-227)
+Nuclide  90228.09c -- thorium 228 at 900K (Th-228)
+Nuclide  90229.09c -- thorium 229 at 900K (Th-229)
+Nuclide  90230.09c -- thorium 230 at 900K (Th-230)
+Nuclide  91231.09c -- protactinium 231 at 900K (Pa-231)
+Nuclide  91232.09c -- protactinium 232 at 900K (Pa-232)
+Nuclide  91233.09c -- protactinium 233 at 900K (Pa-233)
+Nuclide  92232.09c -- uranium 232 at 900K (U-232)
+Nuclide  92233.09c -- uranium 233 at 900K (U-233)
+Nuclide  92237.09c -- uranium 237 at 900K (U-237)
+Nuclide  92239.09c -- uranium 239 at 900K (U-239)
+Nuclide  92240.09c -- uranium 240 at 900K (U-240)
+Nuclide  92241.09c -- uranium 241 at 900K (U-241)
+Nuclide  93235.09c -- neptunium 235 at 900K (Np-235)
+Nuclide  93236.09c -- neptunium 236 at 900K (Np-236)
+Nuclide  93237.09c -- neptunium 237 at 900K (Np-237)
+Nuclide  93238.09c -- neptunium 238 at 900K (Np-238)
+Nuclide  93239.09c -- neptunium 239 at 900K (Np-239)
+Nuclide  94236.09c -- plutonium 236 at 900K (Pu-236)
+Nuclide  94237.09c -- plutonium 237 at 900K (Pu-237)
+Nuclide  94238.09c -- plutonium 238 at 900K (Pu-238)
+Nuclide  94239.09c -- plutonium 239 at 900K (Pu-239)
+Nuclide  94240.09c -- plutonium 240 at 900K (Pu-240)
+Nuclide  94241.09c -- plutonium 241 at 900K (Pu-241)
+Nuclide  94242.09c -- plutonium 242 at 900K (Pu-242)
+Nuclide  94243.09c -- plutonium 243 at 900K (Pu-243)
+Nuclide  94244.09c -- plutonium 244 at 900K (Pu-244)
+Nuclide  95241.09c -- americium 241 at 900K (Am-241)
+Nuclide  95242.09c -- americium 242 at 900K (Am-242)
+Nuclide  95642.09c -- americium 242m at 900K (Am-242m)
+Nuclide  95243.09c -- americium 243 at 900K (Am-243)
+Nuclide  95244.09c -- americium 244 at 900K (Am-244)
+Nuclide  95644.09c -- americium 244m at 900K (Am-244m)
+Nuclide  96240.09c -- curium 240 at 900K (Cm-240)
+Nuclide  96241.09c -- curium 241 at 900K (Cm-241)
+Nuclide  96242.09c -- curium 242 at 900K (Cm-242)
+Nuclide  96243.09c -- curium 243 at 900K (Cm-243)
+Nuclide  96244.09c -- curium 244 at 900K (Cm-244)
+Nuclide  96245.09c -- curium 245 at 900K (Cm-245)
+Nuclide  96246.09c -- curium 246 at 900K (Cm-246)
+Nuclide  96247.09c -- curium 247 at 900K (Cm-247)
+Nuclide  96248.09c -- curium 248 at 900K (Cm-248)
+Nuclide  96249.09c -- curium 249 at 900K (Cm-249)
+Nuclide  96250.09c -- curium 250 at 900K (Cm-250)
+
+Adding fission product data...
+
+Nuclide  22050.09c -- titanium 50 at 900K (Ti-50)
+Nuclide  23050.09c -- vanadium 50 at 900K (V-50)
+Nuclide  23051.09c -- vanadium 51 at 900K (V-51)
+Nuclide  24052.09c -- chromium 52 at 900K (Cr-52)
+Nuclide  24053.09c -- chromium 53 at 900K (Cr-53)
+Nuclide  24054.09c -- chromium 54 at 900K (Cr-54)
+Nuclide  25054.09c -- manganese 54 at 900K (Mn-54)
+Nuclide  25055.09c -- manganese 55 at 900K (Mn-55)
+Nuclide  26056.09c -- iron 56 at 900K (Fe-56)
+Nuclide  26057.09c -- iron 57 at 900K (Fe-57)
+Nuclide  26058.09c -- iron 58 at 900K (Fe-58)
+Nuclide  26059.09c -- iron 59 at 900K (Fe-59)
+Nuclide  26060.09c -- iron 60 at 900K (Fe-60)
+Nuclide  27059.09c -- cobalt 59 at 900K (Co-59)
+Nuclide  27060.09c -- cobalt 60 at 900K (Co-60)
+Nuclide  27462.09c -- cobalt 62m at 900K (Co-62m)
+Nuclide  28061.09c -- nickel 61 at 900K (Ni-61)
+Nuclide  28062.09c -- nickel 62 at 900K (Ni-62)
+Nuclide  28063.09c -- nickel 63 at 900K (Ni-63)
+Nuclide  28064.09c -- nickel 64 at 900K (Ni-64)
+Nuclide  28066.09c -- nickel 66 at 900K (Ni-66)
+Nuclide  29064.09c -- copper 64 at 900K (Cu-64)
+Nuclide  29065.09c -- copper 65 at 900K (Cu-65)
+Nuclide  29066.09c -- copper 66 at 900K (Cu-66)
+Nuclide  29067.09c -- copper 67 at 900K (Cu-67)
+Nuclide  30066.09c -- zinc 66 at 900K (Zn-66)
+Nuclide  30067.09c -- zinc 67 at 900K (Zn-67)
+Nuclide  30068.09c -- zinc 68 at 900K (Zn-68)
+Nuclide  30070.09c -- zinc 70 at 900K (Zn-70)
+Nuclide  31069.09c -- gallium 69 at 900K (Ga-69)
+Nuclide  31071.09c -- gallium 71 at 900K (Ga-71)
+Nuclide  32070.09c -- germanium 70 at 900K (Ge-70)
+Nuclide  32072.09c -- germanium 72 at 900K (Ge-72)
+Nuclide  32073.09c -- germanium 73 at 900K (Ge-73)
+Nuclide  32074.09c -- germanium 74 at 900K (Ge-74)
+Nuclide  32076.09c -- germanium 76 at 900K (Ge-76)
+Nuclide  33073.09c -- arsenic 73 at 900K (As-73)
+Nuclide  33074.09c -- arsenic 74 at 900K (As-74)
+Nuclide  33075.09c -- arsenic 75 at 900K (As-75)
+Nuclide  33076.09c -- arsenic 76 at 900K (As-76)
+Nuclide  33077.09c -- arsenic 77 at 900K (As-77)
+Nuclide  34075.09c -- selenium 75 at 900K (Se-75)
+Nuclide  34076.09c -- selenium 76 at 900K (Se-76)
+Nuclide  34077.09c -- selenium 77 at 900K (Se-77)
+Nuclide  34078.09c -- selenium 78 at 900K (Se-78)
+Nuclide  34079.09c -- selenium 79 at 900K (Se-79)
+Nuclide  34080.09c -- selenium 80 at 900K (Se-80)
+Nuclide  34082.09c -- selenium 82 at 900K (Se-82)
+Nuclide  35079.09c -- bromine 79 at 900K (Br-79)
+Nuclide  35081.09c -- bromine 81 at 900K (Br-81)
+Nuclide  35082.09c -- bromine 82 at 900K (Br-82)
+Nuclide  36080.09c -- krypton 80 at 900K (Kr-80)
+Nuclide  36082.09c -- krypton 82 at 900K (Kr-82)
+Nuclide  36083.09c -- krypton 83 at 900K (Kr-83)
+Nuclide  36084.09c -- krypton 84 at 900K (Kr-84)
+Nuclide  36085.09c -- krypton 85 at 900K (Kr-85)
+Nuclide  36086.09c -- krypton 86 at 900K (Kr-86)
+Nuclide  37085.09c -- rubidium 85 at 900K (Rb-85)
+Nuclide  37086.09c -- rubidium 86 at 900K (Rb-86)
+Nuclide  37087.09c -- rubidium 87 at 900K (Rb-87)
+Nuclide  37088.09c -- rubidium 88 at 900K (Rb-88)
+Nuclide  38083.09c -- strontium 83 at 900K (Sr-83)
+Nuclide  38084.09c -- strontium 84 at 900K (Sr-84)
+Nuclide  38085.09c -- strontium 85 at 900K (Sr-85)
+Nuclide  38086.09c -- strontium 86 at 900K (Sr-86)
+Nuclide  38087.09c -- strontium 87 at 900K (Sr-87)
+Nuclide  38088.09c -- strontium 88 at 900K (Sr-88)
+Nuclide  38089.09c -- strontium 89 at 900K (Sr-89)
+Nuclide  38090.09c -- strontium 90 at 900K (Sr-90)
+Nuclide  39087.09c -- yttrium 87 at 900K (Y-87)
+Nuclide  39088.09c -- yttrium 88 at 900K (Y-88)
+Nuclide  39089.09c -- yttrium 89 at 900K (Y-89)
+Nuclide  39090.09c -- yttrium 90 at 900K (Y-90)
+Nuclide  39091.09c -- yttrium 91 at 900K (Y-91)
+Nuclide  40088.09c -- zirconium 88 at 900K (Zr-88)
+Nuclide  40089.09c -- zirconium 89 at 900K (Zr-89)
+Nuclide  40090.09c -- zirconium 90 at 900K (Zr-90)
+Nuclide  40091.09c -- zirconium 91 at 900K (Zr-91)
+Nuclide  40092.09c -- zirconium 92 at 900K (Zr-92)
+Nuclide  40093.09c -- zirconium 93 at 900K (Zr-93)
+Nuclide  40094.09c -- zirconium 94 at 900K (Zr-94)
+Nuclide  40095.09c -- zirconium 95 at 900K (Zr-95)
+Nuclide  40096.09c -- zirconium 96 at 900K (Zr-96)
+Nuclide  41091.09c -- niobium 91 at 900K (Nb-91)
+Nuclide  41092.09c -- niobium 92 at 900K (Nb-92)
+Nuclide  41093.09c -- niobium 93 at 900K (Nb-93)
+Nuclide  41094.09c -- niobium 94 at 900K (Nb-94)
+Nuclide  41494.09c -- niobium 94m at 900K (Nb-94m)
+Nuclide  41095.09c -- niobium 95 at 900K (Nb-95)
+Nuclide  42092.09c -- molybdenum 92 at 900K (Mo-92)
+Nuclide  42093.09c -- molybdenum 93 at 900K (Mo-93)
+Nuclide  42094.09c -- molybdenum 94 at 900K (Mo-94)
+Nuclide  42095.09c -- molybdenum 95 at 900K (Mo-95)
+Nuclide  42096.09c -- molybdenum 96 at 900K (Mo-96)
+Nuclide  42097.09c -- molybdenum 97 at 900K (Mo-97)
+Nuclide  42098.09c -- molybdenum 98 at 900K (Mo-98)
+Nuclide  42099.09c -- molybdenum 99 at 900K (Mo-99)
+Nuclide  42100.09c -- molybdenum 100 at 900K (Mo-100)
+Nuclide  43096.09c -- technetium 96 at 900K (Tc-96)
+Nuclide  43097.09c -- technetium 97 at 900K (Tc-97)
+Nuclide  43098.09c -- technetium 98 at 900K (Tc-98)
+Nuclide  43099.09c -- technetium 99 at 900K (Tc-99)
+Nuclide  44096.09c -- ruthenium 96 at 900K (Ru-96)
+Nuclide  44097.09c -- ruthenium 97 at 900K (Ru-97)
+Nuclide  44098.09c -- ruthenium 98 at 900K (Ru-98)
+Nuclide  44099.09c -- ruthenium 99 at 900K (Ru-99)
+Nuclide  44100.09c -- ruthenium 100 at 900K (Ru-100)
+Nuclide  44101.09c -- ruthenium 101 at 900K (Ru-101)
+Nuclide  44102.09c -- ruthenium 102 at 900K (Ru-102)
+Nuclide  44103.09c -- ruthenium 103 at 900K (Ru-103)
+Nuclide  44104.09c -- ruthenium 104 at 900K (Ru-104)
+Nuclide  44105.09c -- ruthenium 105 at 900K (Ru-105)
+Nuclide  44106.09c -- ruthenium 106 at 900K (Ru-106)
+Nuclide  45099.09c -- rhodium 99 at 900K (Rh-99)
+Nuclide  45101.09c -- rhodium 101 at 900K (Rh-101)
+Nuclide  45102.09c -- rhodium 102 at 900K (Rh-102)
+Nuclide  45103.09c -- rhodium 103 at 900K (Rh-103)
+Nuclide  45104.09c -- rhodium 104 at 900K (Rh-104)
+Nuclide  45105.09c -- rhodium 105 at 900K (Rh-105)
+Nuclide  46102.09c -- palladium 102 at 900K (Pd-102)
+Nuclide  46103.09c -- palladium 103 at 900K (Pd-103)
+Nuclide  46104.09c -- palladium 104 at 900K (Pd-104)
+Nuclide  46105.09c -- palladium 105 at 900K (Pd-105)
+Nuclide  46106.09c -- palladium 106 at 900K (Pd-106)
+Nuclide  46107.09c -- palladium 107 at 900K (Pd-107)
+Nuclide  46108.09c -- palladium 108 at 900K (Pd-108)
+Nuclide  46110.09c -- palladium 110 at 900K (Pd-110)
+Nuclide  47506.09c -- silver 106m at 900K (Ag-106m)
+Nuclide  47107.09c -- silver 107 at 900K (Ag-107)
+Nuclide  47108.09c -- silver 108 at 900K (Ag-108)
+Nuclide  47109.09c -- silver 109 at 900K (Ag-109)
+Nuclide  47110.09c -- silver 110 at 900K (Ag-110)
+Nuclide  47510.09c -- silver 110m at 900K (Ag-110m)
+Nuclide  47111.09c -- silver 111 at 900K (Ag-111)
+Nuclide  48106.09c -- cadmium 106 at 900K (Cd-106)
+Nuclide  48108.09c -- cadmium 108 at 900K (Cd-108)
+Nuclide  48109.09c -- cadmium 109 at 900K (Cd-109)
+Nuclide  48110.09c -- cadmium 110 at 900K (Cd-110)
+Nuclide  48111.09c -- cadmium 111 at 900K (Cd-111)
+Nuclide  48112.09c -- cadmium 112 at 900K (Cd-112)
+Nuclide  48113.09c -- cadmium 113 at 900K (Cd-113)
+Nuclide  48114.09c -- cadmium 114 at 900K (Cd-114)
+Nuclide  48515.09c -- cadmium 115m at 900K (Cd-115m)
+Nuclide  48116.09c -- cadmium 116 at 900K (Cd-116)
+Nuclide  49113.09c -- indium 113 at 900K (In-113)
+Nuclide  49114.09c -- indium 114 at 900K (In-114)
+Nuclide  49115.09c -- indium 115 at 900K (In-115)
+Nuclide  50115.09c -- tin 115 at 900K (Sn-115)
+Nuclide  50116.09c -- tin 116 at 900K (Sn-116)
+Nuclide  50117.09c -- tin 117 at 900K (Sn-117)
+Nuclide  50118.09c -- tin 118 at 900K (Sn-118)
+Nuclide  50119.09c -- tin 119 at 900K (Sn-119)
+Nuclide  50120.09c -- tin 120 at 900K (Sn-120)
+Nuclide  50121.09c -- tin 121 at 900K (Sn-121)
+Nuclide  50122.09c -- tin 122 at 900K (Sn-122)
+Nuclide  50123.09c -- tin 123 at 900K (Sn-123)
+Nuclide  50124.09c -- tin 124 at 900K (Sn-124)
+Nuclide  50125.09c -- tin 125 at 900K (Sn-125)
+Nuclide  50126.09c -- tin 126 at 900K (Sn-126)
+Nuclide  51121.09c -- antimony 121 at 900K (Sb-121)
+Nuclide  51122.09c -- antimony 122 at 900K (Sb-122)
+Nuclide  51123.09c -- antimony 123 at 900K (Sb-123)
+Nuclide  51124.09c -- antimony 124 at 900K (Sb-124)
+Nuclide  51125.09c -- antimony 125 at 900K (Sb-125)
+Nuclide  51126.09c -- antimony 126 at 900K (Sb-126)
+Nuclide  51127.09c -- antimony 127 at 900K (Sb-127)
+Nuclide  52120.09c -- tellurium 120 at 900K (Te-120)
+Nuclide  52121.09c -- tellurium 121 at 900K (Te-121)
+Nuclide  52122.09c -- tellurium 122 at 900K (Te-122)
+Nuclide  52123.09c -- tellurium 123 at 900K (Te-123)
+Nuclide  52124.09c -- tellurium 124 at 900K (Te-124)
+Nuclide  52125.09c -- tellurium 125 at 900K (Te-125)
+Nuclide  52126.09c -- tellurium 126 at 900K (Te-126)
+Nuclide  52527.09c -- tellurium 127m at 900K (Te-127m)
+Nuclide  52128.09c -- tellurium 128 at 900K (Te-128)
+Nuclide  52529.09c -- tellurium 129m at 900K (Te-129m)
+Nuclide  52130.09c -- tellurium 130 at 900K (Te-130)
+Nuclide  52531.09c -- tellurium 131m at 900K (Te-131m)
+Nuclide  52132.09c -- tellurium 132 at 900K (Te-132)
+Nuclide  53126.09c -- iodine 126 at 900K (I-126)
+Nuclide  53127.09c -- iodine 127 at 900K (I-127)
+Nuclide  53128.09c -- iodine 128 at 900K (I-128)
+Nuclide  53129.09c -- iodine 129 at 900K (I-129)
+Nuclide  53130.09c -- iodine 130 at 900K (I-130)
+Nuclide  53131.09c -- iodine 131 at 900K (I-131)
+Nuclide  53135.09c -- iodine 135 at 900K (I-135)
+Nuclide  54128.09c -- xenon 128 at 900K (Xe-128)
+Nuclide  54129.09c -- xenon 129 at 900K (Xe-129)
+Nuclide  54130.09c -- xenon 130 at 900K (Xe-130)
+Nuclide  54131.09c -- xenon 131 at 900K (Xe-131)
+Nuclide  54132.09c -- xenon 132 at 900K (Xe-132)
+Nuclide  54133.09c -- xenon 133 at 900K (Xe-133)
+Nuclide  54134.09c -- xenon 134 at 900K (Xe-134)
+Nuclide  54135.09c -- xenon 135 at 900K (Xe-135)
+Nuclide  54535.09c -- xenon 135m at 900K (Xe-135m)
+Nuclide  54136.09c -- xenon 136 at 900K (Xe-136)
+Nuclide  55133.09c -- cesium 133 at 900K (Cs-133)
+Nuclide  55134.09c -- cesium 134 at 900K (Cs-134)
+Nuclide  55135.09c -- cesium 135 at 900K (Cs-135)
+Nuclide  55136.09c -- cesium 136 at 900K (Cs-136)
+Nuclide  55137.09c -- cesium 137 at 900K (Cs-137)
+Nuclide  56130.09c -- barium 130 at 900K (Ba-130)
+Nuclide  56131.09c -- barium 131 at 900K (Ba-131)
+Nuclide  56132.09c -- barium 132 at 900K (Ba-132)
+Nuclide  56133.09c -- barium 133 at 900K (Ba-133)
+Nuclide  56134.09c -- barium 134 at 900K (Ba-134)
+Nuclide  56135.09c -- barium 135 at 900K (Ba-135)
+Nuclide  56136.09c -- barium 136 at 900K (Ba-136)
+Nuclide  56137.09c -- barium 137 at 900K (Ba-137)
+Nuclide  56138.09c -- barium 138 at 900K (Ba-138)
+Nuclide  56139.09c -- barium 139 at 900K (Ba-139)
+Nuclide  56140.09c -- barium 140 at 900K (Ba-140)
+Nuclide  57137.09c -- lanthanum 137 at 900K (La-137)
+Nuclide  57138.09c -- lanthanum 138 at 900K (La-138)
+Nuclide  57139.09c -- lanthanum 139 at 900K (La-139)
+Nuclide  57140.09c -- lanthanum 140 at 900K (La-140)
+Nuclide  58136.09c -- cerium 136 at 900K (Ce-136)
+Nuclide  58137.09c -- cerium 137 at 900K (Ce-137)
+Nuclide  58138.09c -- cerium 138 at 900K (Ce-138)
+Nuclide  58139.09c -- cerium 139 at 900K (Ce-139)
+Nuclide  58140.09c -- cerium 140 at 900K (Ce-140)
+Nuclide  58141.09c -- cerium 141 at 900K (Ce-141)
+Nuclide  58142.09c -- cerium 142 at 900K (Ce-142)
+Nuclide  58143.09c -- cerium 143 at 900K (Ce-143)
+Nuclide  58144.09c -- cerium 144 at 900K (Ce-144)
+Nuclide  59141.09c -- praseodymium 141 at 900K (Pr-141)
+Nuclide  59142.09c -- praseodymium 142 at 900K (Pr-142)
+Nuclide  59143.09c -- praseodymium 143 at 900K (Pr-143)
+Nuclide  60142.09c -- neodymium 142 at 900K (Nd-142)
+Nuclide  60143.09c -- neodymium 143 at 900K (Nd-143)
+Nuclide  60144.09c -- neodymium 144 at 900K (Nd-144)
+Nuclide  60145.09c -- neodymium 145 at 900K (Nd-145)
+Nuclide  60146.09c -- neodymium 146 at 900K (Nd-146)
+Nuclide  60147.09c -- neodymium 147 at 900K (Nd-147)
+Nuclide  60148.09c -- neodymium 148 at 900K (Nd-148)
+Nuclide  60150.09c -- neodymium 150 at 900K (Nd-150)
+Nuclide  61147.09c -- promethium 147 at 900K (Pm-147)
+Nuclide  61148.09c -- promethium 148 at 900K (Pm-148)
+Nuclide  61548.09c -- promethium 148m at 900K (Pm-148m)
+Nuclide  61149.09c -- promethium 149 at 900K (Pm-149)
+Nuclide  61151.09c -- promethium 151 at 900K (Pm-151)
+Nuclide  62144.09c -- samarium 144 at 900K (Sm-144)
+Nuclide  62145.09c -- samarium 145 at 900K (Sm-145)
+Nuclide  62146.09c -- samarium 146 at 900K (Sm-146)
+Nuclide  62147.09c -- samarium 147 at 900K (Sm-147)
+Nuclide  62148.09c -- samarium 148 at 900K (Sm-148)
+Nuclide  62149.09c -- samarium 149 at 900K (Sm-149)
+Nuclide  62150.09c -- samarium 150 at 900K (Sm-150)
+Nuclide  62151.09c -- samarium 151 at 900K (Sm-151)
+Nuclide  62152.09c -- samarium 152 at 900K (Sm-152)
+Nuclide  62153.09c -- samarium 153 at 900K (Sm-153)
+Nuclide  62154.09c -- samarium 154 at 900K (Sm-154)
+Nuclide  63151.09c -- europium 151 at 900K (Eu-151)
+Nuclide  63152.09c -- europium 152 at 900K (Eu-152)
+Nuclide  63552.09c -- europium 152m at 900K (Eu-152m)
+Nuclide  63153.09c -- europium 153 at 900K (Eu-153)
+Nuclide  63154.09c -- europium 154 at 900K (Eu-154)
+Nuclide  63155.09c -- europium 155 at 900K (Eu-155)
+Nuclide  63156.09c -- europium 156 at 900K (Eu-156)
+Nuclide  63157.09c -- europium 157 at 900K (Eu-157)
+Nuclide  64148.09c -- gadolinium 148 at 900K (Gd-148)
+Nuclide  64149.09c -- gadolinium 149 at 900K (Gd-149)
+Nuclide  64150.09c -- gadolinium 150 at 900K (Gd-150)
+Nuclide  64154.09c -- gadolinium 154 at 900K (Gd-154)
+Nuclide  64155.09c -- gadolinium 155 at 900K (Gd-155)
+Nuclide  64156.09c -- gadolinium 156 at 900K (Gd-156)
+Nuclide  64157.09c -- gadolinium 157 at 900K (Gd-157)
+Nuclide  64158.09c -- gadolinium 158 at 900K (Gd-158)
+Nuclide  64160.09c -- gadolinium 160 at 900K (Gd-160)
+Nuclide  64161.09c -- gadolinium 161 at 900K (Gd-161)
+Nuclide  65158.09c -- terbium 158 at 900K (Tb-158)
+Nuclide  65159.09c -- terbium 159 at 900K (Tb-159)
+Nuclide  65160.09c -- terbium 160 at 900K (Tb-160)
+Nuclide  66159.09c -- dysprosium 159 at 900K (Dy-159)
+Nuclide  66160.09c -- dysprosium 160 at 900K (Dy-160)
+Nuclide  66161.09c -- dysprosium 161 at 900K (Dy-161)
+Nuclide  66162.09c -- dysprosium 162 at 900K (Dy-162)
+Nuclide  66163.09c -- dysprosium 163 at 900K (Dy-163)
+Nuclide  66164.09c -- dysprosium 164 at 900K (Dy-164)
+Nuclide  66165.09c -- dysprosium 165 at 900K (Dy-165)
+Nuclide  67163.09c -- holmium 163 at 900K (Ho-163)
+Nuclide  67165.09c -- holmium 165 at 900K (Ho-165)
+Nuclide  67566.09c -- holmium 166m at 900K (Ho-166m)
+Nuclide  68164.09c -- erbium 164 at 900K (Er-164)
+Nuclide  68166.09c -- erbium 166 at 900K (Er-166)
+Nuclide  68167.09c -- erbium 167 at 900K (Er-167)
+Nuclide  68168.09c -- erbium 168 at 900K (Er-168)
+Nuclide  68169.09c -- erbium 169 at 900K (Er-169)
+Nuclide  68170.09c -- erbium 170 at 900K (Er-170)
+Nuclide  68171.09c -- erbium 171 at 900K (Er-171)
+Nuclide  68172.09c -- erbium 172 at 900K (Er-172)
+Nuclide  69169.09c -- thulium 169 at 900K (Tm-169)
+Nuclide  69170.09c -- thulium 170 at 900K (Tm-170)
+Nuclide  69171.09c -- thulium 171 at 900K (Tm-171)
+Nuclide  70169.09c -- ytterbium 169 at 900K (Yb-169)
+Nuclide  70170.09c -- ytterbium 170 at 900K (Yb-170)
+Nuclide  70171.09c -- ytterbium 171 at 900K (Yb-171)
+Nuclide  70172.09c -- ytterbium 172 at 900K (Yb-172)
+Nuclide  70173.09c -- ytterbium 173 at 900K (Yb-173)
+Nuclide  70174.09c -- ytterbium 174 at 900K (Yb-174)
+Nuclide  70175.09c -- ytterbium 175 at 900K (Yb-175)
+Nuclide  70176.09c -- ytterbium 176 at 900K (Yb-176)
+Nuclide  71173.09c -- lutetium 173 at 900K (Lu-173)
+Nuclide  71174.09c -- lutetium 174 at 900K (Lu-174)
+Nuclide  71175.09c -- lutetium 175 at 900K (Lu-175)
+Nuclide  71176.09c -- lutetium 176 at 900K (Lu-176)
+Nuclide  71177.09c -- lutetium 177 at 900K (Lu-177)
+Nuclide  72175.09c -- hafnium 175 at 900K (Hf-175)
+Nuclide  72176.09c -- hafnium 176 at 900K (Hf-176)
+Nuclide  72177.09c -- hafnium 177 at 900K (Hf-177)
+Nuclide  72178.09c -- hafnium 178 at 900K (Hf-178)
+Nuclide  72179.09c -- hafnium 179 at 900K (Hf-179)
+Nuclide  72180.09c -- hafnium 180 at 900K (Hf-180)
+Nuclide  72181.09c -- hafnium 181 at 900K (Hf-181)
+Nuclide  72182.09c -- hafnium 182 at 900K (Hf-182)
+Nuclide  73179.09c -- tantalum 179 at 900K (Ta-179)
+Nuclide  73580.09c -- tantalum 180m at 900K (Ta-180m)
+Nuclide  73181.09c -- tantalum 181 at 900K (Ta-181)
+Nuclide  73182.09c -- tantalum 182 at 900K (Ta-182)
+Nuclide  74180.09c -- tungsten 180 at 900K (W-180)
+Nuclide  74181.09c -- tungsten 181 at 900K (W-181)
+Nuclide  74182.09c -- tungsten 182 at 900K (W-182)
+Nuclide  74183.09c -- tungsten 183 at 900K (W-183)
+Nuclide  74184.09c -- tungsten 184 at 900K (W-184)
+Nuclide  74185.09c -- tungsten 185 at 900K (W-185)
+Nuclide  74186.09c -- tungsten 186 at 900K (W-186)
+Nuclide  74188.09c -- tungsten 188 at 900K (W-188)
+Nuclide  75185.09c -- rhenium 185 at 900K (Re-185)
+Nuclide  75186.09c -- rhenium 186 at 900K (Re-186)
+Nuclide  75187.09c -- rhenium 187 at 900K (Re-187)
+Nuclide  75188.09c -- rhenium 188 at 900K (Re-188)
+Nuclide  76186.09c -- osmium 186 at 900K (Os-186)
+Nuclide  76187.09c -- osmium 187 at 900K (Os-187)
+Nuclide  76188.09c -- osmium 188 at 900K (Os-188)
+Nuclide  76189.09c -- osmium 189 at 900K (Os-189)
+Nuclide  76190.09c -- osmium 190 at 900K (Os-190)
+Nuclide  76191.09c -- osmium 191 at 900K (Os-191)
+Nuclide  76192.09c -- osmium 192 at 900K (Os-192)
+Nuclide  76193.09c -- osmium 193 at 900K (Os-193)
+Nuclide  77190.09c -- iridium 190 at 900K (Ir-190)
+Nuclide  77191.09c -- iridium 191 at 900K (Ir-191)
+Nuclide  77192.09c -- iridium 192 at 900K (Ir-192)
+Nuclide  77193.09c -- iridium 193 at 900K (Ir-193)
+Nuclide  78192.09c -- platinum 192 at 900K (Pt-192)
+Nuclide  78193.09c -- platinum 193 at 900K (Pt-193)
+Nuclide  78194.09c -- platinum 194 at 900K (Pt-194)
+Nuclide  78195.09c -- platinum 195 at 900K (Pt-195)
+Nuclide  78196.09c -- platinum 196 at 900K (Pt-196)
+Nuclide  78198.09c -- platinum 198 at 900K (Pt-198)
+Nuclide  79197.09c -- gold 197 at 900K (Au-197)
+Nuclide  80198.09c -- mercury 198 at 900K (Hg-198)
+Nuclide  80199.09c -- mercury 199 at 900K (Hg-199)
+Nuclide  80200.09c -- mercury 200 at 900K (Hg-200)
+
+Adding remaining data and forming paths...
+
+Nuclide  26055.09c -- iron 55 at 900K (Fe-55)
+Nuclide  23049.09c -- vanadium 49 at 900K (V-49)
+Nuclide  20046.09c -- calcium 46 at 900K (Ca-46)
+Nuclide  20048.09c -- calcium 48 at 900K (Ca-48)
+Nuclide  24050.09c -- chromium 50 at 900K (Cr-50)
+Nuclide  25053.09c -- manganese 53 at 900K (Mn-53)
+Nuclide  28060.09c -- nickel 60 at 900K (Ni-60)
+Nuclide  27058.09c -- cobalt 58 at 900K (Co-58)
+Nuclide  29063.09c -- copper 63 at 900K (Cu-63)
+Nuclide  30064.09c -- zinc 64 at 900K (Zn-64)
+Nuclide  31067.09c -- gallium 67 at 900K (Ga-67)
+Nuclide  33072.09c -- arsenic 72 at 900K (As-72)
+Nuclide  34074.09c -- selenium 74 at 900K (Se-74)
+Nuclide  35077.09c -- bromine 77 at 900K (Br-77)
+Nuclide  36078.09c -- krypton 78 at 900K (Kr-78)
+Nuclide  50114.09c -- tin 114 at 900K (Sn-114)
+Nuclide  54126.09c -- xenon 126 at 900K (Xe-126)
+Nuclide  64152.09c -- gadolinium 152 at 900K (Gd-152)
+Nuclide  66158.09c -- dysprosium 158 at 900K (Dy-158)
+Nuclide  68162.09c -- erbium 162 at 900K (Er-162)
+Nuclide  70168.09c -- ytterbium 168 at 900K (Yb-168)
+Nuclide  72174.09c -- hafnium 174 at 900K (Hf-174)
+Nuclide  76185.09c -- osmium 185 at 900K (Os-185)
+Nuclide  78191.09c -- platinum 191 at 900K (Pt-191)
+Nuclide  80201.09c -- mercury 201 at 900K (Hg-201)
+OK.
+
+Running Doppler-broadening preprocessor:
+
+Adjusting nuclide   6000.06c temperature from 600K to 873K...
+Adjusting nuclide  14028.06c temperature from 600K to 873K...
+Adjusting nuclide  14029.06c temperature from 600K to 873K...
+Adjusting nuclide  14030.06c temperature from 600K to 873K...
+Adjusting nuclide  15031.06c temperature from 600K to 873K...
+Adjusting nuclide  16032.06c temperature from 600K to 873K...
+Adjusting nuclide  16033.06c temperature from 600K to 873K...
+Adjusting nuclide  16034.06c temperature from 600K to 873K...
+Adjusting nuclide  16036.06c temperature from 600K to 873K...
+Adjusting nuclide  25055.06c temperature from 600K to 873K...
+Adjusting nuclide  26054.06c temperature from 600K to 873K...
+Adjusting nuclide  26056.06c temperature from 600K to 873K...
+Adjusting nuclide  26057.06c temperature from 600K to 873K...
+Adjusting nuclide  26058.06c temperature from 600K to 873K...
+
+Checking data and printing output...
+OK.
+
+Processing nuclide inventory list...
+
+The following nuclides were not found in compositions and
+were removed from the list:
+
+ 972470 (Bk-247)
+ 972500 (Bk-250)
+ 982500 (Cf-250)
+ 982520 (Cf-252)
+ 992530 (Es-253)
+ 992540 (Es-254)
+ 992550 (Es-255)
+ 1002550 (Fm-255)
+
+Generating unionize energy grids...
+
+Adding points:
+
+  1001.09c -- Points added in neutron grid: 592
+  1002.09c -- Points added in neutron grid: 46
+  1003.09c -- Points added in neutron grid: 140
+  2003.09c -- Points added in neutron grid: 117
+  2004.09c -- Points added in neutron grid: 210
+  3006.09c -- Points added in neutron grid: 141
+  3007.09c -- Points added in neutron grid: 73
+  4009.09c -- Points added in neutron grid: 685
+  5010.09c -- Points added in neutron grid: 91
+  5011.09c -- Points added in neutron grid: 2794
+  6000.06c -- Points added in neutron grid: 537
+  6013.09c -- Points added in neutron grid: 1051
+  7014.09c -- Points added in neutron grid: 978
+  7015.09c -- Points added in neutron grid: 288
+  8016.09c -- Points added in neutron grid: 1946
+  8017.09c -- Points added in neutron grid: 429
+  8018.09c -- Points added in neutron grid: 331
+  9019.09c -- Points added in neutron grid: 1715
+ 10020.09c -- Points added in neutron grid: 1075
+ 10021.09c -- Points added in neutron grid: 2524
+ 10022.09c -- Points added in neutron grid: 875
+ 11022.09c -- Points added in neutron grid: 1565
+ 11023.09c -- Points added in neutron grid: 5826
+ 12024.09c -- Points added in neutron grid: 2072
+ 12025.09c -- Points added in neutron grid: 1057
+ 12026.09c -- Points added in neutron grid: 639
+ 12027.09c -- Points added in neutron grid: 942
+ 13026.09c -- Points added in neutron grid: 2118
+ 13027.09c -- Points added in neutron grid: 4132
+ 14028.06c -- Points added in neutron grid: 6323
+ 14028.09c -- Points added in neutron grid: 153
+ 14029.06c -- Points added in neutron grid: 2232
+ 14029.09c -- Points added in neutron grid: 17
+ 14030.06c -- Points added in neutron grid: 3163
+ 14030.09c -- Points added in neutron grid: 51
+ 14031.09c -- Points added in neutron grid: 2026
+ 14032.09c -- Points added in neutron grid: 404
+ 15031.06c -- Points added in neutron grid: 3814
+ 15031.09c -- Points added in neutron grid: 78
+ 15032.09c -- Points added in neutron grid: 759
+ 15033.09c -- Points added in neutron grid: 1313
+ 16032.06c -- Points added in neutron grid: 10030
+ 16032.09c -- Points added in neutron grid: 267
+ 16033.06c -- Points added in neutron grid: 3474
+ 16033.09c -- Points added in neutron grid: 44
+ 16034.06c -- Points added in neutron grid: 8166
+ 16034.09c -- Points added in neutron grid: 398
+ 16035.09c -- Points added in neutron grid: 1743
+ 16036.06c -- Points added in neutron grid: 1077
+ 16036.09c -- Points added in neutron grid: 10
+ 17035.09c -- Points added in neutron grid: 17559
+ 17036.09c -- Points added in neutron grid: 1494
+ 17037.09c -- Points added in neutron grid: 11961
+ 18036.09c -- Points added in neutron grid: 9421
+ 18037.09c -- Points added in neutron grid: 2725
+ 18038.09c -- Points added in neutron grid: 21388
+ 18039.09c -- Points added in neutron grid: 9328
+ 18040.09c -- Points added in neutron grid: 20503
+ 19039.09c -- Points added in neutron grid: 15019
+ 20046.09c -- Points added in neutron grid: 2307
+ 20048.09c -- Points added in neutron grid: 5193
+ 22050.09c -- Points added in neutron grid: 8313
+ 23049.09c -- Points added in neutron grid: 2235
+ 23050.09c -- Points added in neutron grid: 7321
+ 23051.09c -- Points added in neutron grid: 12778
+ 24050.09c -- Points added in neutron grid: 30002
+ 24052.09c -- Points added in neutron grid: 29110
+ 24053.09c -- Points added in neutron grid: 20174
+ 24054.09c -- Points added in neutron grid: 12489
+ 25053.09c -- Points added in neutron grid: 3685
+ 25054.09c -- Points added in neutron grid: 2795
+ 25055.06c -- Points added in neutron grid: 12917
+ 25055.09c -- Points added in neutron grid: 611
+ 26054.06c -- Points added in neutron grid: 20021
+ 26055.09c -- Points added in neutron grid: 2413
+ 26056.06c -- Points added in neutron grid: 37677
+ 26056.09c -- Points added in neutron grid: 1239
+ 26057.06c -- Points added in neutron grid: 6167
+ 26057.09c -- Points added in neutron grid: 203
+ 26058.06c -- Points added in neutron grid: 19261
+ 26058.09c -- Points added in neutron grid: 1344
+ 26059.09c -- Points added in neutron grid: 1836
+ 26060.09c -- Points added in neutron grid: 2465
+ 27058.09c -- Points added in neutron grid: 5880
+ 27059.09c -- Points added in neutron grid: 18594
+ 27060.09c -- Points added in neutron grid: 6529
+ 27462.09c -- Points added in neutron grid: 2491
+ 28060.09c -- Points added in neutron grid: 26746
+ 28061.09c -- Points added in neutron grid: 10476
+ 28062.09c -- Points added in neutron grid: 7993
+ 28063.09c -- Points added in neutron grid: 1365
+ 28064.09c -- Points added in neutron grid: 7012
+ 28066.09c -- Points added in neutron grid: 1103
+ 29063.09c -- Points added in neutron grid: 22470
+ 29064.09c -- Points added in neutron grid: 3347
+ 29065.09c -- Points added in neutron grid: 16946
+ 29066.09c -- Points added in neutron grid: 2242
+ 29067.09c -- Points added in neutron grid: 1526
+ 30064.09c -- Points added in neutron grid: 45870
+ 30066.09c -- Points added in neutron grid: 50439
+ 30067.09c -- Points added in neutron grid: 40580
+ 30068.09c -- Points added in neutron grid: 37273
+ 30070.09c -- Points added in neutron grid: 19324
+ 31067.09c -- Points added in neutron grid: 2953
+ 31069.09c -- Points added in neutron grid: 12001
+ 31071.09c -- Points added in neutron grid: 11353
+ 32070.09c -- Points added in neutron grid: 13887
+ 32072.09c -- Points added in neutron grid: 19660
+ 32073.09c -- Points added in neutron grid: 22220
+ 32074.09c -- Points added in neutron grid: 13803
+ 32076.09c -- Points added in neutron grid: 6855
+ 33072.09c -- Points added in neutron grid: 13180
+ 33073.09c -- Points added in neutron grid: 2141
+ 33074.09c -- Points added in neutron grid: 6684
+ 33075.09c -- Points added in neutron grid: 39035
+ 33076.09c -- Points added in neutron grid: 2437
+ 33077.09c -- Points added in neutron grid: 3309
+ 34074.09c -- Points added in neutron grid: 8273
+ 34075.09c -- Points added in neutron grid: 2184
+ 34076.09c -- Points added in neutron grid: 8636
+ 34077.09c -- Points added in neutron grid: 11727
+ 34078.09c -- Points added in neutron grid: 13242
+ 34079.09c -- Points added in neutron grid: 8035
+ 34080.09c -- Points added in neutron grid: 16695
+ 34082.09c -- Points added in neutron grid: 7956
+ 35077.09c -- Points added in neutron grid: 1993
+ 35079.09c -- Points added in neutron grid: 30573
+ 35081.09c -- Points added in neutron grid: 24389
+ 35082.09c -- Points added in neutron grid: 2724
+ 36078.09c -- Points added in neutron grid: 6836
+ 36080.09c -- Points added in neutron grid: 10266
+ 36082.09c -- Points added in neutron grid: 7533
+ 36083.09c -- Points added in neutron grid: 12585
+ 36084.09c -- Points added in neutron grid: 17530
+ 36085.09c -- Points added in neutron grid: 5220
+ 36086.09c -- Points added in neutron grid: 12405
+ 37085.09c -- Points added in neutron grid: 33931
+ 37086.09c -- Points added in neutron grid: 7492
+ 37087.09c -- Points added in neutron grid: 9278
+ 37088.09c -- Points added in neutron grid: 1943
+ 38083.09c -- Points added in neutron grid: 16417
+ 38084.09c -- Points added in neutron grid: 17195
+ 38085.09c -- Points added in neutron grid: 2283
+ 38086.09c -- Points added in neutron grid: 20005
+ 38087.09c -- Points added in neutron grid: 15534
+ 38088.09c -- Points added in neutron grid: 31469
+ 38089.09c -- Points added in neutron grid: 9182
+ 38090.09c -- Points added in neutron grid: 10218
+ 39087.09c -- Points added in neutron grid: 2537
+ 39088.09c -- Points added in neutron grid: 2695
+ 39089.09c -- Points added in neutron grid: 5582
+ 39090.09c -- Points added in neutron grid: 7300
+ 39091.09c -- Points added in neutron grid: 2450
+ 40088.09c -- Points added in neutron grid: 5529
+ 40089.09c -- Points added in neutron grid: 2831
+ 40090.09c -- Points added in neutron grid: 3517
+ 40091.09c -- Points added in neutron grid: 8075
+ 40092.09c -- Points added in neutron grid: 9889
+ 40093.09c -- Points added in neutron grid: 8497
+ 40094.09c -- Points added in neutron grid: 10189
+ 40095.09c -- Points added in neutron grid: 4134
+ 40096.09c -- Points added in neutron grid: 5240
+ 41091.09c -- Points added in neutron grid: 9391
+ 41092.09c -- Points added in neutron grid: 7745
+ 41093.09c -- Points added in neutron grid: 26226
+ 41094.09c -- Points added in neutron grid: 663
+ 41494.09c -- Points added in neutron grid: 2825
+ 41095.09c -- Points added in neutron grid: 120
+ 42092.09c -- Points added in neutron grid: 10874
+ 42093.09c -- Points added in neutron grid: 4549
+ 42094.09c -- Points added in neutron grid: 8323
+ 42095.09c -- Points added in neutron grid: 9873
+ 42096.09c -- Points added in neutron grid: 10845
+ 42097.09c -- Points added in neutron grid: 10649
+ 42098.09c -- Points added in neutron grid: 17472
+ 42099.09c -- Points added in neutron grid: 2385
+ 42100.09c -- Points added in neutron grid: 17044
+ 43096.09c -- Points added in neutron grid: 12925
+ 43097.09c -- Points added in neutron grid: 9231
+ 43098.09c -- Points added in neutron grid: 10122
+ 43099.09c -- Points added in neutron grid: 39268
+ 44096.09c -- Points added in neutron grid: 9975
+ 44097.09c -- Points added in neutron grid: 3436
+ 44098.09c -- Points added in neutron grid: 10198
+ 44099.09c -- Points added in neutron grid: 24979
+ 44100.09c -- Points added in neutron grid: 16030
+ 44101.09c -- Points added in neutron grid: 11897
+ 44102.09c -- Points added in neutron grid: 17718
+ 44103.09c -- Points added in neutron grid: 2361
+ 44104.09c -- Points added in neutron grid: 15506
+ 44105.09c -- Points added in neutron grid: 121
+ 44106.09c -- Points added in neutron grid: 3771
+ 45099.09c -- Points added in neutron grid: 7173
+ 45101.09c -- Points added in neutron grid: 2791
+ 45102.09c -- Points added in neutron grid: 12187
+ 45103.09c -- Points added in neutron grid: 26754
+ 45104.09c -- Points added in neutron grid: 19547
+ 45105.09c -- Points added in neutron grid: 17444
+ 46102.09c -- Points added in neutron grid: 6153
+ 46103.09c -- Points added in neutron grid: 2374
+ 46104.09c -- Points added in neutron grid: 14868
+ 46105.09c -- Points added in neutron grid: 22911
+ 46106.09c -- Points added in neutron grid: 12054
+ 46107.09c -- Points added in neutron grid: 13387
+ 46108.09c -- Points added in neutron grid: 12131
+ 46110.09c -- Points added in neutron grid: 19755
+ 47107.09c -- Points added in neutron grid: 43869
+ 47108.09c -- Points added in neutron grid: 15043
+ 47109.09c -- Points added in neutron grid: 10788
+ 47110.09c -- Points added in neutron grid: 16851
+ 47510.09c -- Points added in neutron grid: 2876
+ 47111.09c -- Points added in neutron grid: 6978
+ 48106.09c -- Points added in neutron grid: 7685
+ 48108.09c -- Points added in neutron grid: 8849
+ 48109.09c -- Points added in neutron grid: 2066
+ 48110.09c -- Points added in neutron grid: 13154
+ 48111.09c -- Points added in neutron grid: 17634
+ 48112.09c -- Points added in neutron grid: 13452
+ 48113.09c -- Points added in neutron grid: 24404
+ 48114.09c -- Points added in neutron grid: 12709
+ 48515.09c -- Points added in neutron grid: 4100
+ 48116.09c -- Points added in neutron grid: 7841
+ 49113.09c -- Points added in neutron grid: 9394
+ 49114.09c -- Points added in neutron grid: 14912
+ 49115.09c -- Points added in neutron grid: 24386
+ 50114.09c -- Points added in neutron grid: 3610
+ 50115.09c -- Points added in neutron grid: 1599
+ 50116.09c -- Points added in neutron grid: 23966
+ 50117.09c -- Points added in neutron grid: 10510
+ 50118.09c -- Points added in neutron grid: 10947
+ 50119.09c -- Points added in neutron grid: 3713
+ 50120.09c -- Points added in neutron grid: 26152
+ 50121.09c -- Points added in neutron grid: 2775
+ 50122.09c -- Points added in neutron grid: 50871
+ 50123.09c -- Points added in neutron grid: 2085
+ 50124.09c -- Points added in neutron grid: 30041
+ 50125.09c -- Points added in neutron grid: 1765
+ 50126.09c -- Points added in neutron grid: 6935
+ 51121.09c -- Points added in neutron grid: 18837
+ 51122.09c -- Points added in neutron grid: 15143
+ 51123.09c -- Points added in neutron grid: 15685
+ 51124.09c -- Points added in neutron grid: 10199
+ 51125.09c -- Points added in neutron grid: 4401
+ 51126.09c -- Points added in neutron grid: 8131
+ 51127.09c -- Points added in neutron grid: 3086
+ 52120.09c -- Points added in neutron grid: 6501
+ 52121.09c -- Points added in neutron grid: 18712
+ 52122.09c -- Points added in neutron grid: 29715
+ 52123.09c -- Points added in neutron grid: 44121
+ 52124.09c -- Points added in neutron grid: 34707
+ 52125.09c -- Points added in neutron grid: 29747
+ 52126.09c -- Points added in neutron grid: 33782
+ 52527.09c -- Points added in neutron grid: 2565
+ 52128.09c -- Points added in neutron grid: 38252
+ 52529.09c -- Points added in neutron grid: 4091
+ 52130.09c -- Points added in neutron grid: 7694
+ 52531.09c -- Points added in neutron grid: 3482
+ 52132.09c -- Points added in neutron grid: 3928
+ 53126.09c -- Points added in neutron grid: 11448
+ 53127.09c -- Points added in neutron grid: 38201
+ 53128.09c -- Points added in neutron grid: 15514
+ 53129.09c -- Points added in neutron grid: 25489
+ 53130.09c -- Points added in neutron grid: 9029
+ 53131.09c -- Points added in neutron grid: 1703
+ 53135.09c -- Points added in neutron grid: 193
+ 54126.09c -- Points added in neutron grid: 11677
+ 54128.09c -- Points added in neutron grid: 2504
+ 54129.09c -- Points added in neutron grid: 11452
+ 54130.09c -- Points added in neutron grid: 4268
+ 54131.09c -- Points added in neutron grid: 36151
+ 54132.09c -- Points added in neutron grid: 1728
+ 54133.09c -- Points added in neutron grid: 68
+ 54134.09c -- Points added in neutron grid: 1197
+ 54135.09c -- Points added in neutron grid: 558
+ 54535.09c -- Points added in neutron grid: 3209
+ 54136.09c -- Points added in neutron grid: 3435
+ 55133.09c -- Points added in neutron grid: 23460
+ 55134.09c -- Points added in neutron grid: 5242
+ 55135.09c -- Points added in neutron grid: 2349
+ 55136.09c -- Points added in neutron grid: 2586
+ 55137.09c -- Points added in neutron grid: 10451
+ 56130.09c -- Points added in neutron grid: 10747
+ 56131.09c -- Points added in neutron grid: 17852
+ 56132.09c -- Points added in neutron grid: 907
+ 56133.09c -- Points added in neutron grid: 6266
+ 56134.09c -- Points added in neutron grid: 13368
+ 56135.09c -- Points added in neutron grid: 26309
+ 56136.09c -- Points added in neutron grid: 12930
+ 56137.09c -- Points added in neutron grid: 11778
+ 56138.09c -- Points added in neutron grid: 7135
+ 56139.09c -- Points added in neutron grid: 3012
+ 56140.09c -- Points added in neutron grid: 12940
+ 57137.09c -- Points added in neutron grid: 17282
+ 57138.09c -- Points added in neutron grid: 5278
+ 57139.09c -- Points added in neutron grid: 16178
+ 57140.09c -- Points added in neutron grid: 11028
+ 58136.09c -- Points added in neutron grid: 11979
+ 58137.09c -- Points added in neutron grid: 17007
+ 58138.09c -- Points added in neutron grid: 10098
+ 58139.09c -- Points added in neutron grid: 2426
+ 58140.09c -- Points added in neutron grid: 30842
+ 58141.09c -- Points added in neutron grid: 1908
+ 58142.09c -- Points added in neutron grid: 4098
+ 58143.09c -- Points added in neutron grid: 14235
+ 58144.09c -- Points added in neutron grid: 86
+ 59141.09c -- Points added in neutron grid: 20384
+ 59142.09c -- Points added in neutron grid: 1288
+ 59143.09c -- Points added in neutron grid: 2040
+ 60142.09c -- Points added in neutron grid: 11991
+ 60143.09c -- Points added in neutron grid: 23796
+ 60144.09c -- Points added in neutron grid: 7716
+ 60145.09c -- Points added in neutron grid: 35351
+ 60146.09c -- Points added in neutron grid: 7994
+ 60147.09c -- Points added in neutron grid: 2927
+ 60148.09c -- Points added in neutron grid: 14316
+ 60150.09c -- Points added in neutron grid: 18630
+ 61147.09c -- Points added in neutron grid: 8235
+ 61148.09c -- Points added in neutron grid: 1016
+ 61548.09c -- Points added in neutron grid: 1148
+ 61149.09c -- Points added in neutron grid: 630
+ 61151.09c -- Points added in neutron grid: 6996
+ 62144.09c -- Points added in neutron grid: 8120
+ 62145.09c -- Points added in neutron grid: 10875
+ 62146.09c -- Points added in neutron grid: 4340
+ 62147.09c -- Points added in neutron grid: 32024
+ 62148.09c -- Points added in neutron grid: 3509
+ 62149.09c -- Points added in neutron grid: 18157
+ 62150.09c -- Points added in neutron grid: 32720
+ 62151.09c -- Points added in neutron grid: 13511
+ 62152.09c -- Points added in neutron grid: 20897
+ 62153.09c -- Points added in neutron grid: 2294
+ 62154.09c -- Points added in neutron grid: 7837
+ 63151.09c -- Points added in neutron grid: 7350
+ 63152.09c -- Points added in neutron grid: 1237
+ 63552.09c -- Points added in neutron grid: 1670
+ 63153.09c -- Points added in neutron grid: 7305
+ 63154.09c -- Points added in neutron grid: 2334
+ 63155.09c -- Points added in neutron grid: 1389
+ 63156.09c -- Points added in neutron grid: 504
+ 63157.09c -- Points added in neutron grid: 4174
+ 64148.09c -- Points added in neutron grid: 658
+ 64149.09c -- Points added in neutron grid: 11607
+ 64150.09c -- Points added in neutron grid: 7645
+ 64152.09c -- Points added in neutron grid: 22011
+ 64154.09c -- Points added in neutron grid: 23478
+ 64155.09c -- Points added in neutron grid: 8339
+ 64156.09c -- Points added in neutron grid: 8201
+ 64157.09c -- Points added in neutron grid: 6955
+ 64158.09c -- Points added in neutron grid: 12324
+ 64160.09c -- Points added in neutron grid: 4590
+ 64161.09c -- Points added in neutron grid: 321
+ 65158.09c -- Points added in neutron grid: 9992
+ 65159.09c -- Points added in neutron grid: 24910
+ 65160.09c -- Points added in neutron grid: 1490
+ 66158.09c -- Points added in neutron grid: 13712
+ 66159.09c -- Points added in neutron grid: 670
+ 66160.09c -- Points added in neutron grid: 16029
+ 66161.09c -- Points added in neutron grid: 24405
+ 66162.09c -- Points added in neutron grid: 14076
+ 66163.09c -- Points added in neutron grid: 17622
+ 66164.09c -- Points added in neutron grid: 35019
+ 66165.09c -- Points added in neutron grid: 4244
+ 67163.09c -- Points added in neutron grid: 13768
+ 67165.09c -- Points added in neutron grid: 24313
+ 67566.09c -- Points added in neutron grid: 4995
+ 68162.09c -- Points added in neutron grid: 4575
+ 68164.09c -- Points added in neutron grid: 5342
+ 68166.09c -- Points added in neutron grid: 29262
+ 68167.09c -- Points added in neutron grid: 33104
+ 68168.09c -- Points added in neutron grid: 36322
+ 68169.09c -- Points added in neutron grid: 2603
+ 68170.09c -- Points added in neutron grid: 37279
+ 68171.09c -- Points added in neutron grid: 2865
+ 68172.09c -- Points added in neutron grid: 2932
+ 69169.09c -- Points added in neutron grid: 48671
+ 69170.09c -- Points added in neutron grid: 12861
+ 69171.09c -- Points added in neutron grid: 18938
+ 70168.09c -- Points added in neutron grid: 21137
+ 70169.09c -- Points added in neutron grid: 11286
+ 70170.09c -- Points added in neutron grid: 8708
+ 70171.09c -- Points added in neutron grid: 26995
+ 70172.09c -- Points added in neutron grid: 30115
+ 70173.09c -- Points added in neutron grid: 25697
+ 70174.09c -- Points added in neutron grid: 29934
+ 70175.09c -- Points added in neutron grid: 21673
+ 70176.09c -- Points added in neutron grid: 21135
+ 71173.09c -- Points added in neutron grid: 13509
+ 71174.09c -- Points added in neutron grid: 9911
+ 71175.09c -- Points added in neutron grid: 39042
+ 71176.09c -- Points added in neutron grid: 9516
+ 71177.09c -- Points added in neutron grid: 9368
+ 72174.09c -- Points added in neutron grid: 3448
+ 72175.09c -- Points added in neutron grid: 9523
+ 72176.09c -- Points added in neutron grid: 13649
+ 72177.09c -- Points added in neutron grid: 27192
+ 72178.09c -- Points added in neutron grid: 9318
+ 72179.09c -- Points added in neutron grid: 23611
+ 72180.09c -- Points added in neutron grid: 4503
+ 72181.09c -- Points added in neutron grid: 3009
+ 72182.09c -- Points added in neutron grid: 831
+ 73179.09c -- Points added in neutron grid: 4451
+ 73580.09c -- Points added in neutron grid: 11609
+ 73181.09c -- Points added in neutron grid: 33467
+ 73182.09c -- Points added in neutron grid: 3597
+ 74180.09c -- Points added in neutron grid: 8640
+ 74181.09c -- Points added in neutron grid: 9146
+ 74182.09c -- Points added in neutron grid: 14530
+ 74183.09c -- Points added in neutron grid: 19432
+ 74184.09c -- Points added in neutron grid: 13045
+ 74185.09c -- Points added in neutron grid: 2462
+ 74186.09c -- Points added in neutron grid: 17254
+ 74188.09c -- Points added in neutron grid: 5602
+ 75185.09c -- Points added in neutron grid: 39886
+ 75186.09c -- Points added in neutron grid: 12083
+ 75187.09c -- Points added in neutron grid: 36564
+ 75188.09c -- Points added in neutron grid: 9228
+ 76185.09c -- Points added in neutron grid: 15044
+ 76186.09c -- Points added in neutron grid: 7002
+ 76187.09c -- Points added in neutron grid: 23085
+ 76188.09c -- Points added in neutron grid: 20950
+ 76189.09c -- Points added in neutron grid: 8134
+ 76190.09c -- Points added in neutron grid: 8871
+ 76191.09c -- Points added in neutron grid: 15589
+ 76192.09c -- Points added in neutron grid: 9895
+ 76193.09c -- Points added in neutron grid: 1815
+ 77190.09c -- Points added in neutron grid: 1985
+ 77191.09c -- Points added in neutron grid: 6410
+ 77192.09c -- Points added in neutron grid: 4519
+ 77193.09c -- Points added in neutron grid: 6725
+ 78191.09c -- Points added in neutron grid: 6847
+ 78192.09c -- Points added in neutron grid: 82357
+ 78193.09c -- Points added in neutron grid: 18885
+ 78194.09c -- Points added in neutron grid: 10328
+ 78195.09c -- Points added in neutron grid: 29591
+ 78196.09c -- Points added in neutron grid: 10162
+ 78198.09c -- Points added in neutron grid: 15215
+ 79197.09c -- Points added in neutron grid: 15248
+ 80198.09c -- Points added in neutron grid: 12916
+ 80199.09c -- Points added in neutron grid: 6597
+ 80200.09c -- Points added in neutron grid: 13013
+ 80201.09c -- Points added in neutron grid: 2144
+ 90227.09c -- Points added in neutron grid: 119
+ 90228.09c -- Points added in neutron grid: 743
+ 90229.09c -- Points added in neutron grid: 1633
+ 90230.09c -- Points added in neutron grid: 5802
+ 91231.09c -- Points added in neutron grid: 10877
+ 91232.09c -- Points added in neutron grid: 1610
+ 91233.09c -- Points added in neutron grid: 9541
+ 92232.09c -- Points added in neutron grid: 4927
+ 92233.09c -- Points added in neutron grid: 15049
+ 92234.09c -- Points added in neutron grid: 16848
+ 92235.09c -- Points added in neutron grid: 38767
+ 92236.09c -- Points added in neutron grid: 15104
+ 92237.09c -- Points added in neutron grid: 8846
+ 92238.09c -- Points added in neutron grid: 91696
+ 92239.09c -- Points added in neutron grid: 7247
+ 92240.09c -- Points added in neutron grid: 12298
+ 92241.09c -- Points added in neutron grid: 6366
+ 93235.09c -- Points added in neutron grid: 121
+ 93236.09c -- Points added in neutron grid: 1074
+ 93237.09c -- Points added in neutron grid: 22346
+ 93238.09c -- Points added in neutron grid: 3431
+ 93239.09c -- Points added in neutron grid: 200
+ 94236.09c -- Points added in neutron grid: 471
+ 94237.09c -- Points added in neutron grid: 16
+ 94238.09c -- Points added in neutron grid: 9798
+ 94239.09c -- Points added in neutron grid: 49292
+ 94240.09c -- Points added in neutron grid: 41056
+ 94241.09c -- Points added in neutron grid: 11246
+ 94242.09c -- Points added in neutron grid: 12575
+ 94243.09c -- Points added in neutron grid: 7280
+ 94244.09c -- Points added in neutron grid: 5470
+ 95241.09c -- Points added in neutron grid: 11960
+ 95242.09c -- Points added in neutron grid: 4499
+ 95642.09c -- Points added in neutron grid: 1798
+ 95243.09c -- Points added in neutron grid: 15125
+ 95244.09c -- Points added in neutron grid: 131
+ 95644.09c -- Points added in neutron grid: 194
+ 96240.09c -- Points added in neutron grid: 78
+ 96241.09c -- Points added in neutron grid: 57
+ 96242.09c -- Points added in neutron grid: 3427
+ 96243.09c -- Points added in neutron grid: 4568
+ 96244.09c -- Points added in neutron grid: 13616
+ 96245.09c -- Points added in neutron grid: 3682
+ 96246.09c -- Points added in neutron grid: 4722
+ 96247.09c -- Points added in neutron grid: 4097
+ 96248.09c -- Points added in neutron grid: 7666
+ 96249.09c -- Points added in neutron grid: 158
+ 96250.09c -- Points added in neutron grid: 1710
+
+Performing grid thinning for neutron grid:
+
+ - 5508417 total grid points in unionized grid, with
+   233336 local minima and maxima.
+
+ - Thinning performed with 5.00E-05 fractional tolerance
+   between 1.00E-11 and 20.0 MeV.
+
+ - Final neutron grid size: 508683 points.
+
+ - 19.02 Mb of memory allocated for grid data
+
+OK.
+
+Processing cross sections and ENDF reaction laws...
+
+Nuclide   1001.09c -- hydrogen at 900K (H-1)
+Nuclide   1002.09c -- deuterium at 900K (H-2)
+Nuclide   1003.09c -- tritium at 900K (H-3)
+Nuclide   2003.09c -- helium 3 at 900K (He-3)
+Nuclide   2004.09c -- helium 4 at 900K (He-4)
+Nuclide   3006.09c -- lithium 6 at 900K (Li-6)
+Nuclide   3007.09c -- lithium 7 at 900K (Li-7)
+Nuclide   4009.09c -- beryllium 9 at 900K (Be-9)
+Nuclide   5010.09c -- boron 10 at 900K (B-10)
+Nuclide   5011.09c -- boron 11 at 900K (B-11)
+Nuclide   6000.06c -- natural carbon at 873K (C-nat)
+Nuclide   6013.09c -- carbon 13 at 900K (C-13)
+Nuclide   7014.09c -- nitrogen 14 at 900K (N-14)
+Nuclide   7015.09c -- nitrogen 15 at 900K (N-15)
+Nuclide   8016.09c -- oxygen 16 at 900K (O-16)
+Nuclide   8017.09c -- oxygen 17 at 900K (O-17)
+Nuclide   8018.09c -- oxygen 18 at 900K (O-18)
+Nuclide   9019.09c -- fluorine 19 at 900K (F-19)
+Nuclide  10020.09c -- neon 20 at 900K (Ne-20)
+Nuclide  10021.09c -- neon 21 at 900K (Ne-21)
+Nuclide  10022.09c -- neon 22 at 900K (Ne-22)
+Nuclide  11022.09c -- sodium 22 at 900K (Na-22)
+Nuclide  11023.09c -- sodium 23 at 900K (Na-23)
+Nuclide  12024.09c -- magnesium 24 at 900K (Mg-24)
+Nuclide  12025.09c -- magnesium 25 at 900K (Mg-25)
+Nuclide  12026.09c -- magnesium 26 at 900K (Mg-26)
+Nuclide  12027.09c -- magnesium 27 at 900K (Mg-27)
+Nuclide  13026.09c -- aluminum 26 at 900K (Al-26)
+Nuclide  13027.09c -- aluminum 27 at 900K (Al-27)
+Nuclide  14028.06c -- silicon 28 at 873K (Si-28)
+Nuclide  14028.09c -- silicon 28 at 900K (Si-28)
+Nuclide  14029.06c -- silicon 29 at 873K (Si-29)
+Nuclide  14029.09c -- silicon 29 at 900K (Si-29)
+Nuclide  14030.06c -- silicon 30 at 873K (Si-30)
+Nuclide  14030.09c -- silicon 30 at 900K (Si-30)
+Nuclide  14031.09c -- silicon 31 at 900K (Si-31)
+Nuclide  14032.09c -- silicon 32 at 900K (Si-32)
+Nuclide  15031.06c -- phosphorus 31 at 873K (P-31)
+Nuclide  15031.09c -- phosphorus 31 at 900K (P-31)
+Nuclide  15032.09c -- phosphorus 32 at 900K (P-32)
+Nuclide  15033.09c -- phosphorus 33 at 900K (P-33)
+Nuclide  16032.06c -- sulfur 32 at 873K (S-32)
+Nuclide  16032.09c -- sulfur 32 at 900K (S-32)
+Nuclide  16033.06c -- sulfur 33 at 873K (S-33)
+Nuclide  16033.09c -- sulfur 33 at 900K (S-33)
+Nuclide  16034.06c -- sulfur 34 at 873K (S-34)
+Nuclide  16034.09c -- sulfur 34 at 900K (S-34)
+Nuclide  16035.09c -- sulfur 35 at 900K (S-35)
+Nuclide  16036.06c -- sulfur 36 at 873K (S-36)
+Nuclide  16036.09c -- sulfur 36 at 900K (S-36)
+Nuclide  17035.09c -- chlorine 35 at 900K (Cl-35)
+Nuclide  17036.09c -- chlorine 36 at 900K (Cl-36)
+Nuclide  17037.09c -- chlorine 37 at 900K (Cl-37)
+Nuclide  18036.09c -- argon 36 at 900K (Ar-36)
+Nuclide  18037.09c -- argon 37 at 900K (Ar-37)
+Nuclide  18038.09c -- argon 38 at 900K (Ar-38)
+Nuclide  18039.09c -- argon 39 at 900K (Ar-39)
+Nuclide  18040.09c -- argon 40 at 900K (Ar-40)
+Nuclide  19039.09c -- potassium 39 at 900K (K-39)
+Nuclide  20046.09c -- calcium 46 at 900K (Ca-46)
+Nuclide  20048.09c -- calcium 48 at 900K (Ca-48)
+Nuclide  22050.09c -- titanium 50 at 900K (Ti-50)
+Nuclide  23049.09c -- vanadium 49 at 900K (V-49)
+Nuclide  23050.09c -- vanadium 50 at 900K (V-50)
+Nuclide  23051.09c -- vanadium 51 at 900K (V-51)
+Nuclide  24050.09c -- chromium 50 at 900K (Cr-50)
+Nuclide  24052.09c -- chromium 52 at 900K (Cr-52)
+Nuclide  24053.09c -- chromium 53 at 900K (Cr-53)
+Nuclide  24054.09c -- chromium 54 at 900K (Cr-54)
+Nuclide  25053.09c -- manganese 53 at 900K (Mn-53)
+Nuclide  25054.09c -- manganese 54 at 900K (Mn-54)
+Nuclide  25055.06c -- manganese 55 at 873K (Mn-55)
+Nuclide  25055.09c -- manganese 55 at 900K (Mn-55)
+Nuclide  26054.06c -- iron 54 at 873K (Fe-54)
+Nuclide  26055.09c -- iron 55 at 900K (Fe-55)
+Nuclide  26056.06c -- iron 56 at 873K (Fe-56)
+Nuclide  26056.09c -- iron 56 at 900K (Fe-56)
+Nuclide  26057.06c -- iron 57 at 873K (Fe-57)
+Nuclide  26057.09c -- iron 57 at 900K (Fe-57)
+Nuclide  26058.06c -- iron 58 at 873K (Fe-58)
+Nuclide  26058.09c -- iron 58 at 900K (Fe-58)
+Nuclide  26059.09c -- iron 59 at 900K (Fe-59)
+Nuclide  26060.09c -- iron 60 at 900K (Fe-60)
+Nuclide  27058.09c -- cobalt 58 at 900K (Co-58)
+Nuclide  27059.09c -- cobalt 59 at 900K (Co-59)
+Nuclide  27060.09c -- cobalt 60 at 900K (Co-60)
+Nuclide  27462.09c -- cobalt 62m at 900K (Co-62m)
+Nuclide  28060.09c -- nickel 60 at 900K (Ni-60)
+Nuclide  28061.09c -- nickel 61 at 900K (Ni-61)
+Nuclide  28062.09c -- nickel 62 at 900K (Ni-62)
+Nuclide  28063.09c -- nickel 63 at 900K (Ni-63)
+Nuclide  28064.09c -- nickel 64 at 900K (Ni-64)
+Nuclide  28066.09c -- nickel 66 at 900K (Ni-66)
+Nuclide  29063.09c -- copper 63 at 900K (Cu-63)
+Nuclide  29064.09c -- copper 64 at 900K (Cu-64)
+Nuclide  29065.09c -- copper 65 at 900K (Cu-65)
+Nuclide  29066.09c -- copper 66 at 900K (Cu-66)
+Nuclide  29067.09c -- copper 67 at 900K (Cu-67)
+Nuclide  30064.09c -- zinc 64 at 900K (Zn-64)
+Nuclide  30066.09c -- zinc 66 at 900K (Zn-66)
+Nuclide  30067.09c -- zinc 67 at 900K (Zn-67)
+Nuclide  30068.09c -- zinc 68 at 900K (Zn-68)
+Nuclide  30070.09c -- zinc 70 at 900K (Zn-70)
+Nuclide  31067.09c -- gallium 67 at 900K (Ga-67)
+Nuclide  31069.09c -- gallium 69 at 900K (Ga-69)
+Nuclide  31071.09c -- gallium 71 at 900K (Ga-71)
+Nuclide  32070.09c -- germanium 70 at 900K (Ge-70)
+Nuclide  32072.09c -- germanium 72 at 900K (Ge-72)
+Nuclide  32073.09c -- germanium 73 at 900K (Ge-73)
+Nuclide  32074.09c -- germanium 74 at 900K (Ge-74)
+Nuclide  32076.09c -- germanium 76 at 900K (Ge-76)
+Nuclide  33072.09c -- arsenic 72 at 900K (As-72)
+Nuclide  33073.09c -- arsenic 73 at 900K (As-73)
+Nuclide  33074.09c -- arsenic 74 at 900K (As-74)
+Nuclide  33075.09c -- arsenic 75 at 900K (As-75)
+Nuclide  33076.09c -- arsenic 76 at 900K (As-76)
+Nuclide  33077.09c -- arsenic 77 at 900K (As-77)
+Nuclide  34074.09c -- selenium 74 at 900K (Se-74)
+Nuclide  34075.09c -- selenium 75 at 900K (Se-75)
+Nuclide  34076.09c -- selenium 76 at 900K (Se-76)
+Nuclide  34077.09c -- selenium 77 at 900K (Se-77)
+Nuclide  34078.09c -- selenium 78 at 900K (Se-78)
+Nuclide  34079.09c -- selenium 79 at 900K (Se-79)
+Nuclide  34080.09c -- selenium 80 at 900K (Se-80)
+Nuclide  34082.09c -- selenium 82 at 900K (Se-82)
+Nuclide  35077.09c -- bromine 77 at 900K (Br-77)
+Nuclide  35079.09c -- bromine 79 at 900K (Br-79)
+Nuclide  35081.09c -- bromine 81 at 900K (Br-81)
+Nuclide  35082.09c -- bromine 82 at 900K (Br-82)
+Nuclide  36078.09c -- krypton 78 at 900K (Kr-78)
+Nuclide  36080.09c -- krypton 80 at 900K (Kr-80)
+Nuclide  36082.09c -- krypton 82 at 900K (Kr-82)
+Nuclide  36083.09c -- krypton 83 at 900K (Kr-83)
+Nuclide  36084.09c -- krypton 84 at 900K (Kr-84)
+Nuclide  36085.09c -- krypton 85 at 900K (Kr-85)
+Nuclide  36086.09c -- krypton 86 at 900K (Kr-86)
+Nuclide  37085.09c -- rubidium 85 at 900K (Rb-85)
+Nuclide  37086.09c -- rubidium 86 at 900K (Rb-86)
+Nuclide  37087.09c -- rubidium 87 at 900K (Rb-87)
+Nuclide  37088.09c -- rubidium 88 at 900K (Rb-88)
+Nuclide  38083.09c -- strontium 83 at 900K (Sr-83)
+Nuclide  38084.09c -- strontium 84 at 900K (Sr-84)
+Nuclide  38085.09c -- strontium 85 at 900K (Sr-85)
+Nuclide  38086.09c -- strontium 86 at 900K (Sr-86)
+Nuclide  38087.09c -- strontium 87 at 900K (Sr-87)
+Nuclide  38088.09c -- strontium 88 at 900K (Sr-88)
+Nuclide  38089.09c -- strontium 89 at 900K (Sr-89)
+Nuclide  38090.09c -- strontium 90 at 900K (Sr-90)
+Nuclide  39087.09c -- yttrium 87 at 900K (Y-87)
+Nuclide  39088.09c -- yttrium 88 at 900K (Y-88)
+Nuclide  39089.09c -- yttrium 89 at 900K (Y-89)
+Nuclide  39090.09c -- yttrium 90 at 900K (Y-90)
+Nuclide  39091.09c -- yttrium 91 at 900K (Y-91)
+Nuclide  40088.09c -- zirconium 88 at 900K (Zr-88)
+Nuclide  40089.09c -- zirconium 89 at 900K (Zr-89)
+Nuclide  40090.09c -- zirconium 90 at 900K (Zr-90)
+Nuclide  40091.09c -- zirconium 91 at 900K (Zr-91)
+Nuclide  40092.09c -- zirconium 92 at 900K (Zr-92)
+Nuclide  40093.09c -- zirconium 93 at 900K (Zr-93)
+Nuclide  40094.09c -- zirconium 94 at 900K (Zr-94)
+Nuclide  40095.09c -- zirconium 95 at 900K (Zr-95)
+Nuclide  40096.09c -- zirconium 96 at 900K (Zr-96)
+Nuclide  41091.09c -- niobium 91 at 900K (Nb-91)
+Nuclide  41092.09c -- niobium 92 at 900K (Nb-92)
+Nuclide  41093.09c -- niobium 93 at 900K (Nb-93)
+Nuclide  41094.09c -- niobium 94 at 900K (Nb-94)
+Nuclide  41494.09c -- niobium 94m at 900K (Nb-94m)
+Nuclide  41095.09c -- niobium 95 at 900K (Nb-95)
+Nuclide  42092.09c -- molybdenum 92 at 900K (Mo-92)
+Nuclide  42093.09c -- molybdenum 93 at 900K (Mo-93)
+Nuclide  42094.09c -- molybdenum 94 at 900K (Mo-94)
+Nuclide  42095.09c -- molybdenum 95 at 900K (Mo-95)
+Nuclide  42096.09c -- molybdenum 96 at 900K (Mo-96)
+Nuclide  42097.09c -- molybdenum 97 at 900K (Mo-97)
+Nuclide  42098.09c -- molybdenum 98 at 900K (Mo-98)
+Nuclide  42099.09c -- molybdenum 99 at 900K (Mo-99)
+Nuclide  42100.09c -- molybdenum 100 at 900K (Mo-100)
+Nuclide  43096.09c -- technetium 96 at 900K (Tc-96)
+Nuclide  43097.09c -- technetium 97 at 900K (Tc-97)
+Nuclide  43098.09c -- technetium 98 at 900K (Tc-98)
+Nuclide  43099.09c -- technetium 99 at 900K (Tc-99)
+Nuclide  44096.09c -- ruthenium 96 at 900K (Ru-96)
+Nuclide  44097.09c -- ruthenium 97 at 900K (Ru-97)
+Nuclide  44098.09c -- ruthenium 98 at 900K (Ru-98)
+Nuclide  44099.09c -- ruthenium 99 at 900K (Ru-99)
+Nuclide  44100.09c -- ruthenium 100 at 900K (Ru-100)
+Nuclide  44101.09c -- ruthenium 101 at 900K (Ru-101)
+Nuclide  44102.09c -- ruthenium 102 at 900K (Ru-102)
+Nuclide  44103.09c -- ruthenium 103 at 900K (Ru-103)
+Nuclide  44104.09c -- ruthenium 104 at 900K (Ru-104)
+Nuclide  44105.09c -- ruthenium 105 at 900K (Ru-105)
+Nuclide  44106.09c -- ruthenium 106 at 900K (Ru-106)
+Nuclide  45099.09c -- rhodium 99 at 900K (Rh-99)
+Nuclide  45101.09c -- rhodium 101 at 900K (Rh-101)
+Nuclide  45102.09c -- rhodium 102 at 900K (Rh-102)
+Nuclide  45103.09c -- rhodium 103 at 900K (Rh-103)
+Nuclide  45104.09c -- rhodium 104 at 900K (Rh-104)
+Nuclide  45105.09c -- rhodium 105 at 900K (Rh-105)
+Nuclide  46102.09c -- palladium 102 at 900K (Pd-102)
+Nuclide  46103.09c -- palladium 103 at 900K (Pd-103)
+Nuclide  46104.09c -- palladium 104 at 900K (Pd-104)
+Nuclide  46105.09c -- palladium 105 at 900K (Pd-105)
+Nuclide  46106.09c -- palladium 106 at 900K (Pd-106)
+Nuclide  46107.09c -- palladium 107 at 900K (Pd-107)
+Nuclide  46108.09c -- palladium 108 at 900K (Pd-108)
+Nuclide  46110.09c -- palladium 110 at 900K (Pd-110)
+Nuclide  47107.09c -- silver 107 at 900K (Ag-107)
+Nuclide  47108.09c -- silver 108 at 900K (Ag-108)
+Nuclide  47109.09c -- silver 109 at 900K (Ag-109)
+Nuclide  47110.09c -- silver 110 at 900K (Ag-110)
+Nuclide  47510.09c -- silver 110m at 900K (Ag-110m)
+Nuclide  47111.09c -- silver 111 at 900K (Ag-111)
+Nuclide  48106.09c -- cadmium 106 at 900K (Cd-106)
+Nuclide  48108.09c -- cadmium 108 at 900K (Cd-108)
+Nuclide  48109.09c -- cadmium 109 at 900K (Cd-109)
+Nuclide  48110.09c -- cadmium 110 at 900K (Cd-110)
+Nuclide  48111.09c -- cadmium 111 at 900K (Cd-111)
+Nuclide  48112.09c -- cadmium 112 at 900K (Cd-112)
+Nuclide  48113.09c -- cadmium 113 at 900K (Cd-113)
+Nuclide  48114.09c -- cadmium 114 at 900K (Cd-114)
+Nuclide  48515.09c -- cadmium 115m at 900K (Cd-115m)
+Nuclide  48116.09c -- cadmium 116 at 900K (Cd-116)
+Nuclide  49113.09c -- indium 113 at 900K (In-113)
+Nuclide  49114.09c -- indium 114 at 900K (In-114)
+Nuclide  49115.09c -- indium 115 at 900K (In-115)
+Nuclide  50114.09c -- tin 114 at 900K (Sn-114)
+Nuclide  50115.09c -- tin 115 at 900K (Sn-115)
+Nuclide  50116.09c -- tin 116 at 900K (Sn-116)
+Nuclide  50117.09c -- tin 117 at 900K (Sn-117)
+Nuclide  50118.09c -- tin 118 at 900K (Sn-118)
+Nuclide  50119.09c -- tin 119 at 900K (Sn-119)
+Nuclide  50120.09c -- tin 120 at 900K (Sn-120)
+Nuclide  50121.09c -- tin 121 at 900K (Sn-121)
+Nuclide  50122.09c -- tin 122 at 900K (Sn-122)
+Nuclide  50123.09c -- tin 123 at 900K (Sn-123)
+Nuclide  50124.09c -- tin 124 at 900K (Sn-124)
+Nuclide  50125.09c -- tin 125 at 900K (Sn-125)
+Nuclide  50126.09c -- tin 126 at 900K (Sn-126)
+Nuclide  51121.09c -- antimony 121 at 900K (Sb-121)
+Nuclide  51122.09c -- antimony 122 at 900K (Sb-122)
+Nuclide  51123.09c -- antimony 123 at 900K (Sb-123)
+Nuclide  51124.09c -- antimony 124 at 900K (Sb-124)
+Nuclide  51125.09c -- antimony 125 at 900K (Sb-125)
+Nuclide  51126.09c -- antimony 126 at 900K (Sb-126)
+Nuclide  51127.09c -- antimony 127 at 900K (Sb-127)
+Nuclide  52120.09c -- tellurium 120 at 900K (Te-120)
+Nuclide  52121.09c -- tellurium 121 at 900K (Te-121)
+Nuclide  52122.09c -- tellurium 122 at 900K (Te-122)
+Nuclide  52123.09c -- tellurium 123 at 900K (Te-123)
+Nuclide  52124.09c -- tellurium 124 at 900K (Te-124)
+Nuclide  52125.09c -- tellurium 125 at 900K (Te-125)
+Nuclide  52126.09c -- tellurium 126 at 900K (Te-126)
+Nuclide  52527.09c -- tellurium 127m at 900K (Te-127m)
+Nuclide  52128.09c -- tellurium 128 at 900K (Te-128)
+Nuclide  52529.09c -- tellurium 129m at 900K (Te-129m)
+Nuclide  52130.09c -- tellurium 130 at 900K (Te-130)
+Nuclide  52531.09c -- tellurium 131m at 900K (Te-131m)
+Nuclide  52132.09c -- tellurium 132 at 900K (Te-132)
+Nuclide  53126.09c -- iodine 126 at 900K (I-126)
+Nuclide  53127.09c -- iodine 127 at 900K (I-127)
+Nuclide  53128.09c -- iodine 128 at 900K (I-128)
+Nuclide  53129.09c -- iodine 129 at 900K (I-129)
+Nuclide  53130.09c -- iodine 130 at 900K (I-130)
+Nuclide  53131.09c -- iodine 131 at 900K (I-131)
+Nuclide  53135.09c -- iodine 135 at 900K (I-135)
+Nuclide  54126.09c -- xenon 126 at 900K (Xe-126)
+Nuclide  54128.09c -- xenon 128 at 900K (Xe-128)
+Nuclide  54129.09c -- xenon 129 at 900K (Xe-129)
+Nuclide  54130.09c -- xenon 130 at 900K (Xe-130)
+Nuclide  54131.09c -- xenon 131 at 900K (Xe-131)
+Nuclide  54132.09c -- xenon 132 at 900K (Xe-132)
+Nuclide  54133.09c -- xenon 133 at 900K (Xe-133)
+Nuclide  54134.09c -- xenon 134 at 900K (Xe-134)
+Nuclide  54135.09c -- xenon 135 at 900K (Xe-135)
+Nuclide  54535.09c -- xenon 135m at 900K (Xe-135m)
+Nuclide  54136.09c -- xenon 136 at 900K (Xe-136)
+Nuclide  55133.09c -- cesium 133 at 900K (Cs-133)
+Nuclide  55134.09c -- cesium 134 at 900K (Cs-134)
+Nuclide  55135.09c -- cesium 135 at 900K (Cs-135)
+Nuclide  55136.09c -- cesium 136 at 900K (Cs-136)
+Nuclide  55137.09c -- cesium 137 at 900K (Cs-137)
+Nuclide  56130.09c -- barium 130 at 900K (Ba-130)
+Nuclide  56131.09c -- barium 131 at 900K (Ba-131)
+Nuclide  56132.09c -- barium 132 at 900K (Ba-132)
+Nuclide  56133.09c -- barium 133 at 900K (Ba-133)
+Nuclide  56134.09c -- barium 134 at 900K (Ba-134)
+Nuclide  56135.09c -- barium 135 at 900K (Ba-135)
+Nuclide  56136.09c -- barium 136 at 900K (Ba-136)
+Nuclide  56137.09c -- barium 137 at 900K (Ba-137)
+Nuclide  56138.09c -- barium 138 at 900K (Ba-138)
+Nuclide  56139.09c -- barium 139 at 900K (Ba-139)
+Nuclide  56140.09c -- barium 140 at 900K (Ba-140)
+Nuclide  57137.09c -- lanthanum 137 at 900K (La-137)
+Nuclide  57138.09c -- lanthanum 138 at 900K (La-138)
+Nuclide  57139.09c -- lanthanum 139 at 900K (La-139)
+Nuclide  57140.09c -- lanthanum 140 at 900K (La-140)
+Nuclide  58136.09c -- cerium 136 at 900K (Ce-136)
+Nuclide  58137.09c -- cerium 137 at 900K (Ce-137)
+Nuclide  58138.09c -- cerium 138 at 900K (Ce-138)
+Nuclide  58139.09c -- cerium 139 at 900K (Ce-139)
+Nuclide  58140.09c -- cerium 140 at 900K (Ce-140)
+Nuclide  58141.09c -- cerium 141 at 900K (Ce-141)
+Nuclide  58142.09c -- cerium 142 at 900K (Ce-142)
+Nuclide  58143.09c -- cerium 143 at 900K (Ce-143)
+Nuclide  58144.09c -- cerium 144 at 900K (Ce-144)
+Nuclide  59141.09c -- praseodymium 141 at 900K (Pr-141)
+Nuclide  59142.09c -- praseodymium 142 at 900K (Pr-142)
+Nuclide  59143.09c -- praseodymium 143 at 900K (Pr-143)
+Nuclide  60142.09c -- neodymium 142 at 900K (Nd-142)
+Nuclide  60143.09c -- neodymium 143 at 900K (Nd-143)
+Nuclide  60144.09c -- neodymium 144 at 900K (Nd-144)
+Nuclide  60145.09c -- neodymium 145 at 900K (Nd-145)
+Nuclide  60146.09c -- neodymium 146 at 900K (Nd-146)
+Nuclide  60147.09c -- neodymium 147 at 900K (Nd-147)
+Nuclide  60148.09c -- neodymium 148 at 900K (Nd-148)
+Nuclide  60150.09c -- neodymium 150 at 900K (Nd-150)
+Nuclide  61147.09c -- promethium 147 at 900K (Pm-147)
+Nuclide  61148.09c -- promethium 148 at 900K (Pm-148)
+Nuclide  61548.09c -- promethium 148m at 900K (Pm-148m)
+Nuclide  61149.09c -- promethium 149 at 900K (Pm-149)
+Nuclide  61151.09c -- promethium 151 at 900K (Pm-151)
+Nuclide  62144.09c -- samarium 144 at 900K (Sm-144)
+Nuclide  62145.09c -- samarium 145 at 900K (Sm-145)
+Nuclide  62146.09c -- samarium 146 at 900K (Sm-146)
+Nuclide  62147.09c -- samarium 147 at 900K (Sm-147)
+Nuclide  62148.09c -- samarium 148 at 900K (Sm-148)
+Nuclide  62149.09c -- samarium 149 at 900K (Sm-149)
+Nuclide  62150.09c -- samarium 150 at 900K (Sm-150)
+Nuclide  62151.09c -- samarium 151 at 900K (Sm-151)
+Nuclide  62152.09c -- samarium 152 at 900K (Sm-152)
+Nuclide  62153.09c -- samarium 153 at 900K (Sm-153)
+Nuclide  62154.09c -- samarium 154 at 900K (Sm-154)
+Nuclide  63151.09c -- europium 151 at 900K (Eu-151)
+Nuclide  63152.09c -- europium 152 at 900K (Eu-152)
+Nuclide  63552.09c -- europium 152m at 900K (Eu-152m)
+Nuclide  63153.09c -- europium 153 at 900K (Eu-153)
+Nuclide  63154.09c -- europium 154 at 900K (Eu-154)
+Nuclide  63155.09c -- europium 155 at 900K (Eu-155)
+Nuclide  63156.09c -- europium 156 at 900K (Eu-156)
+Nuclide  63157.09c -- europium 157 at 900K (Eu-157)
+Nuclide  64148.09c -- gadolinium 148 at 900K (Gd-148)
+Nuclide  64149.09c -- gadolinium 149 at 900K (Gd-149)
+Nuclide  64150.09c -- gadolinium 150 at 900K (Gd-150)
+Nuclide  64152.09c -- gadolinium 152 at 900K (Gd-152)
+
+***** Mon Jan 17 14:14:57 2022
+
+Input error:
+
+Out of memory error (allocating 15.0Gb, limit 15.0Gb = 0.98 * 15.3Gb)
+

@@ -1,0 +1,4852 @@
+
+  _                   .-=-.           .-=-.          .-==-.       
+ { }      __        .' O o '.       .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `._____.'       `.____.'              
+
+Serpent 2 beta
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 2.1.32 (February 24, 2021) -- Contact: serpent@vtt.fi
+
+ - Reference: J. Leppanen, et al. "The Serpent Monte Carlo code: Status,
+              development and applications in 2013." Ann. Nucl. Energy,
+              82 (2015) 142-150.
+
+ - Compiled Feb 24 2021 13:50:53
+
+ - MPI Parallel calculation mode available
+
+ - OpenMP Parallel calculation mode available
+
+ - Geometry and mesh plotting available
+
+ - Default data path set to: "/opt/serpent/xsdata"
+
+ - Full command used to run Serpent:
+
+   sss2 -omp 8 msfr
+
+Begin calculation on Wed Feb 16 14:30:29 2022 at node56
+
+Reading input file "msfr"...
+
+Checking duplicate input definitions...
+OK.
+
+Dividing burnable materials...
+OK.
+
+Creating geometry...
+OK.
+
+Counting geometry zones...
+
+Processing cells...
+OK.
+
+Linking materials to geometry...
+OK.
+
+Processing detector definitions...
+Allocating RESMAT matrices and associated arrays...
+OK.
+
+Counting cells...
+OK.
+
+Reading ACE directory files...
+OK.
+
+
+***** Wed Feb 16 14:30:30 2022 (seed = 1645039829588)
+Warning message from function ReadDecayFile:
+
+Sum of decay branching ratios is 0.450000 (ZAI = 771690)
+
+
+***** Wed Feb 16 14:30:30 2022 (seed = 1645039829588)
+Warning message from function ReadDecayFile:
+
+Sum of decay branching ratios is 0.940000 (ZAI = 791730)
+
+
+***** Wed Feb 16 14:30:30 2022 (seed = 1645039829588)
+Warning message from function ReadDecayFile:
+
+Sum of decay branching ratios is 0.910000 (ZAI = 1022510)
+
+
+***** Wed Feb 16 14:30:30 2022 (seed = 1645039829588)
+Warning message from function ReadDecayFile:
+
+Sum of decay branching ratios is 0.850000 (ZAI = 1022570)
+
+Reading neutron-induced fission yields...
+OK.
+
+Adding nuclides in material fuelsalt...
+
+Nuclide  11023.09c -- sodium 23 at 900K (Na-23)
+Nuclide  17035.09c -- chlorine 35 at 900K (Cl-35)
+Nuclide  17037.09c -- chlorine 37 at 900K (Cl-37)
+Nuclide  92234.09c -- uranium 234 at 900K (U-234)
+Nuclide  92235.09c -- uranium 235 at 900K (U-235)
+Nuclide  92236.09c -- uranium 236 at 900K (U-236)
+Nuclide  92238.09c -- uranium 238 at 900K (U-238)
+
+Adding nuclides in material refl...
+
+Nuclide   6000.06c -- natural carbon at 873K (C-nat)
+Nuclide  14028.06c -- silicon 28 at 873K (Si-28)
+Nuclide  14029.06c -- silicon 29 at 873K (Si-29)
+Nuclide  14030.06c -- silicon 30 at 873K (Si-30)
+Nuclide  15031.06c -- phosphorus 31 at 873K (P-31)
+Nuclide  16032.06c -- sulfur 32 at 873K (S-32)
+Nuclide  16033.06c -- sulfur 33 at 873K (S-33)
+Nuclide  16034.06c -- sulfur 34 at 873K (S-34)
+Nuclide  16036.06c -- sulfur 36 at 873K (S-36)
+Nuclide  25055.06c -- manganese 55 at 873K (Mn-55)
+Nuclide  26054.06c -- iron 54 at 873K (Fe-54)
+Nuclide  26056.06c -- iron 56 at 873K (Fe-56)
+Nuclide  26057.06c -- iron 57 at 873K (Fe-57)
+Nuclide  26058.06c -- iron 58 at 873K (Fe-58)
+
+Running Doppler-broadening preprocessor:
+
+Adjusting nuclide   6000.06c temperature from 600K to 873K...
+Adjusting nuclide  14028.06c temperature from 600K to 873K...
+Adjusting nuclide  14029.06c temperature from 600K to 873K...
+Adjusting nuclide  14030.06c temperature from 600K to 873K...
+Adjusting nuclide  15031.06c temperature from 600K to 873K...
+Adjusting nuclide  16032.06c temperature from 600K to 873K...
+Adjusting nuclide  16033.06c temperature from 600K to 873K...
+Adjusting nuclide  16034.06c temperature from 600K to 873K...
+Adjusting nuclide  16036.06c temperature from 600K to 873K...
+Adjusting nuclide  25055.06c temperature from 600K to 873K...
+Adjusting nuclide  26054.06c temperature from 600K to 873K...
+Adjusting nuclide  26056.06c temperature from 600K to 873K...
+Adjusting nuclide  26057.06c temperature from 600K to 873K...
+Adjusting nuclide  26058.06c temperature from 600K to 873K...
+
+Checking data and printing output...
+OK.
+
+Generating unionize energy grids...
+
+Adding points:
+
+  6000.06c -- Points added in neutron grid: 1299
+ 11023.09c -- Points added in neutron grid: 5952
+ 14028.06c -- Points added in neutron grid: 6516
+ 14029.06c -- Points added in neutron grid: 2274
+ 14030.06c -- Points added in neutron grid: 3173
+ 15031.06c -- Points added in neutron grid: 3854
+ 16032.06c -- Points added in neutron grid: 10077
+ 16033.06c -- Points added in neutron grid: 3498
+ 16034.06c -- Points added in neutron grid: 8198
+ 16036.06c -- Points added in neutron grid: 1087
+ 17035.09c -- Points added in neutron grid: 17617
+ 17037.09c -- Points added in neutron grid: 11993
+ 25055.06c -- Points added in neutron grid: 13140
+ 26054.06c -- Points added in neutron grid: 20706
+ 26056.06c -- Points added in neutron grid: 38949
+ 26057.06c -- Points added in neutron grid: 6469
+ 26058.06c -- Points added in neutron grid: 19671
+ 92234.09c -- Points added in neutron grid: 22153
+ 92235.09c -- Points added in neutron grid: 51996
+ 92236.09c -- Points added in neutron grid: 19715
+ 92238.09c -- Points added in neutron grid: 120952
+
+Generating unionized energy grid:
+
+ - Unionization performed without grid thinning
+   between 1.00E-11 and 20.0 MeV.
+
+ - Final neutron grid size: 388934 points.
+
+ - 14.54 Mb of memory allocated for grid data
+
+OK.
+
+Processing cross sections and ENDF reaction laws...
+
+Nuclide   6000.06c -- natural carbon at 873K (C-nat)
+Nuclide  11023.09c -- sodium 23 at 900K (Na-23)
+Nuclide  14028.06c -- silicon 28 at 873K (Si-28)
+Nuclide  14029.06c -- silicon 29 at 873K (Si-29)
+Nuclide  14030.06c -- silicon 30 at 873K (Si-30)
+Nuclide  15031.06c -- phosphorus 31 at 873K (P-31)
+Nuclide  16032.06c -- sulfur 32 at 873K (S-32)
+Nuclide  16033.06c -- sulfur 33 at 873K (S-33)
+Nuclide  16034.06c -- sulfur 34 at 873K (S-34)
+Nuclide  16036.06c -- sulfur 36 at 873K (S-36)
+Nuclide  17035.09c -- chlorine 35 at 900K (Cl-35)
+Nuclide  17037.09c -- chlorine 37 at 900K (Cl-37)
+Nuclide  25055.06c -- manganese 55 at 873K (Mn-55)
+Nuclide  26054.06c -- iron 54 at 873K (Fe-54)
+Nuclide  26056.06c -- iron 56 at 873K (Fe-56)
+Nuclide  26057.06c -- iron 57 at 873K (Fe-57)
+Nuclide  26058.06c -- iron 58 at 873K (Fe-58)
+Nuclide  92234.09c -- uranium 234 at 900K (U-234)
+Nuclide  92235.09c -- uranium 235 at 900K (U-235)
+Nuclide  92236.09c -- uranium 236 at 900K (U-236)
+Nuclide  92238.09c -- uranium 238 at 900K (U-238)
+
+SUMMARY -- 21 nuclides included in calculation:
+
+ - 21 transport nuclides
+ - Neutron energy cut-offs at 1.00E-11 and 20.0 MeV
+ - 863 transport reactions
+ - 595 special reactions
+ - 8 decay reactions
+ - 550.78 Mb of memory allocated for data
+
+Normalizing compositions and processing mixtures...
+OK.
+
+Allocating memory for macroscopic cross section data...
+OK.
+
+Allocating memory for particle structures...
+OK.
+
+Calculating maximum densities...
+OK.
+
+Performing density cut-off...
+OK.
+
+Sorting material-wise reaction lists:
+
+   0% complete
+ 100% complete
+
+Calculating macroscopic cross sections:
+
+   0% complete
+ 100% complete
+
+Calculating DT neutron majorant cross section:
+
+   0% complete
+ 100% complete
+
+Clearing results and statistics...
+OK.
+
+Sampling initial source...
+OK.
+
+Inactive cycle   1 /  40: k-eff = 1.00000
+Inactive cycle   2 /  40: k-eff = 0.91616
+Inactive cycle   3 /  40: k-eff = 0.93423
+Inactive cycle   4 /  40: k-eff = 0.94249
+Inactive cycle   5 /  40: k-eff = 0.95081
+Inactive cycle   6 /  40: k-eff = 0.95443
+Inactive cycle   7 /  40: k-eff = 0.96152
+Inactive cycle   8 /  40: k-eff = 0.96354
+Inactive cycle   9 /  40: k-eff = 0.96128
+Inactive cycle  10 /  40: k-eff = 0.96629
+Inactive cycle  11 /  40: k-eff = 0.96776
+Inactive cycle  12 /  40: k-eff = 0.96825
+Inactive cycle  13 /  40: k-eff = 0.96668
+Inactive cycle  14 /  40: k-eff = 0.96921
+Inactive cycle  15 /  40: k-eff = 0.96584
+Inactive cycle  16 /  40: k-eff = 0.97376
+Inactive cycle  17 /  40: k-eff = 0.97166
+Inactive cycle  18 /  40: k-eff = 0.96958
+Inactive cycle  19 /  40: k-eff = 0.96746
+Inactive cycle  20 /  40: k-eff = 0.96954
+Inactive cycle  21 /  40: k-eff = 0.97359
+Inactive cycle  22 /  40: k-eff = 0.97012
+Inactive cycle  23 /  40: k-eff = 0.96931
+Inactive cycle  24 /  40: k-eff = 0.97102
+Inactive cycle  25 /  40: k-eff = 0.97009
+Inactive cycle  26 /  40: k-eff = 0.96840
+Inactive cycle  27 /  40: k-eff = 0.97295
+Inactive cycle  28 /  40: k-eff = 0.97145
+Inactive cycle  29 /  40: k-eff = 0.97323
+Inactive cycle  30 /  40: k-eff = 0.96812
+Inactive cycle  31 /  40: k-eff = 0.97239
+Inactive cycle  32 /  40: k-eff = 0.96948
+Inactive cycle  33 /  40: k-eff = 0.97161
+Inactive cycle  34 /  40: k-eff = 0.96796
+Inactive cycle  35 /  40: k-eff = 0.97137
+Inactive cycle  36 /  40: k-eff = 0.97083
+Inactive cycle  37 /  40: k-eff = 0.96748
+Inactive cycle  38 /  40: k-eff = 0.97164
+Inactive cycle  39 /  40: k-eff = 0.97376
+Inactive cycle  40 /  40: k-eff = 0.97231
+
+----- Begin active cycles -----
+
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle    1 / 240  Source neutrons : 498792
+
+Running time :                  0:09:50
+Estimated running time :        1:06:38
+Estimated running time left :   0:56:47
+
+Estimated relative CPU usage :   781.9%
+
+k-eff (analog)    = 0.96996 +/- 0.00000  [0.96996  0.96996]
+k-eff (implicit)  = 0.97020 +/- 0.00000  [0.97020  0.97020]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle    2 / 240  Source neutrons : 499733
+
+Running time :                  0:10:04
+Estimated running time :        1:06:37
+Estimated running time left :   0:56:32
+
+Estimated relative CPU usage :   781.9%
+
+k-eff (analog)    = 0.96970 +/- 0.00026  [0.96919  0.97021]
+k-eff (implicit)  = 0.97040 +/- 0.00020  [0.97001  0.97080]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle    3 / 240  Source neutrons : 500674
+
+Running time :                  0:10:19
+Estimated running time :        1:06:42
+Estimated running time left :   0:56:23
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97005 +/- 0.00038  [0.96931  0.97080]
+k-eff (implicit)  = 0.97023 +/- 0.00021  [0.96982  0.97064]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle    4 / 240  Source neutrons : 498902
+
+Running time :                  0:10:33
+Estimated running time :        1:06:42
+Estimated running time left :   0:56:08
+
+Estimated relative CPU usage :   781.9%
+
+k-eff (analog)    = 0.96969 +/- 0.00045  [0.96881  0.97057]
+k-eff (implicit)  = 0.97028 +/- 0.00016  [0.96997  0.97059]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle    5 / 240  Source neutrons : 500623
+
+Running time :                  0:10:47
+Estimated running time :        1:06:43
+Estimated running time left :   0:55:55
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.96972 +/- 0.00035  [0.96904  0.97040]
+k-eff (implicit)  = 0.97051 +/- 0.00026  [0.97000  0.97103]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle    6 / 240  Source neutrons : 500593
+
+Running time :                  0:11:01
+Estimated running time :        1:06:45
+Estimated running time left :   0:55:43
+
+Estimated relative CPU usage :   781.9%
+
+k-eff (analog)    = 0.96993 +/- 0.00035  [0.96924  0.97062]
+k-eff (implicit)  = 0.97051 +/- 0.00021  [0.97009  0.97093]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle    7 / 240  Source neutrons : 501276
+
+Running time :                  0:11:16
+Estimated running time :        1:06:47
+Estimated running time left :   0:55:31
+
+Estimated relative CPU usage :   781.1%
+
+k-eff (analog)    = 0.97043 +/- 0.00059  [0.96928  0.97158]
+k-eff (implicit)  = 0.97044 +/- 0.00019  [0.97006  0.97082]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle    8 / 240  Source neutrons : 497754
+
+Running time :                  0:11:30
+Estimated running time :        1:06:46
+Estimated running time left :   0:55:15
+
+Estimated relative CPU usage :   782.0%
+
+k-eff (analog)    = 0.97026 +/- 0.00053  [0.96922  0.97131]
+k-eff (implicit)  = 0.97037 +/- 0.00018  [0.97001  0.97073]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle    9 / 240  Source neutrons : 500786
+
+Running time :                  0:11:44
+Estimated running time :        1:06:47
+Estimated running time left :   0:55:02
+
+Estimated relative CPU usage :   781.0%
+
+k-eff (analog)    = 0.97030 +/- 0.00047  [0.96937  0.97123]
+k-eff (implicit)  = 0.97040 +/- 0.00016  [0.97008  0.97072]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   10 / 240  Source neutrons : 500129
+
+Running time :                  0:11:59
+Estimated running time :        1:06:47
+Estimated running time left :   0:54:48
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97036 +/- 0.00043  [0.96952  0.97119]
+k-eff (implicit)  = 0.97059 +/- 0.00024  [0.97012  0.97106]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   11 / 240  Source neutrons : 499178
+
+Running time :                  0:12:13
+Estimated running time :        1:06:46
+Estimated running time left :   0:54:33
+
+Estimated relative CPU usage :   780.7%
+
+k-eff (analog)    = 0.97026 +/- 0.00040  [0.96948  0.97104]
+k-eff (implicit)  = 0.97059 +/- 0.00022  [0.97016  0.97101]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   12 / 240  Source neutrons : 501141
+
+Running time :                  0:12:27
+Estimated running time :        1:06:47
+Estimated running time left :   0:54:19
+
+Estimated relative CPU usage :   781.9%
+
+k-eff (analog)    = 0.97036 +/- 0.00038  [0.96962  0.97110]
+k-eff (implicit)  = 0.97057 +/- 0.00020  [0.97018  0.97096]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   13 / 240  Source neutrons : 499082
+
+Running time :                  0:12:42
+Estimated running time :        1:06:47
+Estimated running time left :   0:54:05
+
+Estimated relative CPU usage :   781.5%
+
+k-eff (analog)    = 0.97031 +/- 0.00035  [0.96962  0.97099]
+k-eff (implicit)  = 0.97058 +/- 0.00018  [0.97022  0.97094]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   14 / 240  Source neutrons : 500593
+
+Running time :                  0:12:56
+Estimated running time :        1:06:47
+Estimated running time left :   0:53:51
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97034 +/- 0.00033  [0.96970  0.97098]
+k-eff (implicit)  = 0.97059 +/- 0.00017  [0.97026  0.97093]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   15 / 240  Source neutrons : 499068
+
+Running time :                  0:13:10
+Estimated running time :        1:06:46
+Estimated running time left :   0:53:36
+
+Estimated relative CPU usage :   781.9%
+
+k-eff (analog)    = 0.97026 +/- 0.00032  [0.96963  0.97088]
+k-eff (implicit)  = 0.97066 +/- 0.00017  [0.97032  0.97099]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   16 / 240  Source neutrons : 501003
+
+Running time :                  0:13:24
+Estimated running time :        1:06:47
+Estimated running time left :   0:53:22
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97030 +/- 0.00030  [0.96971  0.97089]
+k-eff (implicit)  = 0.97064 +/- 0.00016  [0.97033  0.97096]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   17 / 240  Source neutrons : 499417
+
+Running time :                  0:13:39
+Estimated running time :        1:06:47
+Estimated running time left :   0:53:07
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97027 +/- 0.00028  [0.96972  0.97083]
+k-eff (implicit)  = 0.97065 +/- 0.00015  [0.97036  0.97095]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   18 / 240  Source neutrons : 500224
+
+Running time :                  0:13:53
+Estimated running time :        1:06:47
+Estimated running time left :   0:52:53
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97027 +/- 0.00027  [0.96975  0.97080]
+k-eff (implicit)  = 0.97063 +/- 0.00014  [0.97035  0.97091]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   19 / 240  Source neutrons : 499157
+
+Running time :                  0:14:07
+Estimated running time :        1:06:46
+Estimated running time left :   0:52:38
+
+Estimated relative CPU usage :   781.9%
+
+k-eff (analog)    = 0.97019 +/- 0.00027  [0.96966  0.97071]
+k-eff (implicit)  = 0.97062 +/- 0.00014  [0.97035  0.97089]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   20 / 240  Source neutrons : 499904
+
+Running time :                  0:14:22
+Estimated running time :        1:06:47
+Estimated running time left :   0:52:25
+
+Estimated relative CPU usage :   781.0%
+
+k-eff (analog)    = 0.97010 +/- 0.00027  [0.96958  0.97062]
+k-eff (implicit)  = 0.97062 +/- 0.00013  [0.97036  0.97087]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   21 / 240  Source neutrons : 499951
+
+Running time :                  0:14:36
+Estimated running time :        1:06:47
+Estimated running time left :   0:52:10
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97002 +/- 0.00027  [0.96949  0.97054]
+k-eff (implicit)  = 0.97064 +/- 0.00013  [0.97039  0.97089]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   22 / 240  Source neutrons : 502233
+
+Running time :                  0:14:50
+Estimated running time :        1:06:48
+Estimated running time left :   0:51:57
+
+Estimated relative CPU usage :   780.6%
+
+k-eff (analog)    = 0.97014 +/- 0.00028  [0.96958  0.97069]
+k-eff (implicit)  = 0.97069 +/- 0.00013  [0.97044  0.97095]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   23 / 240  Source neutrons : 498779
+
+Running time :                  0:15:05
+Estimated running time :        1:06:47
+Estimated running time left :   0:51:42
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97015 +/- 0.00027  [0.96962  0.97067]
+k-eff (implicit)  = 0.97070 +/- 0.00013  [0.97045  0.97094]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   24 / 240  Source neutrons : 498615
+
+Running time :                  0:15:19
+Estimated running time :        1:06:46
+Estimated running time left :   0:51:27
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97004 +/- 0.00028  [0.96949  0.97059]
+k-eff (implicit)  = 0.97075 +/- 0.00013  [0.97049  0.97101]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   25 / 240  Source neutrons : 503924
+
+Running time :                  0:15:33
+Estimated running time :        1:06:47
+Estimated running time left :   0:51:13
+
+Estimated relative CPU usage :   781.1%
+
+k-eff (analog)    = 0.97025 +/- 0.00034  [0.96958  0.97091]
+k-eff (implicit)  = 0.97079 +/- 0.00013  [0.97053  0.97105]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   26 / 240  Source neutrons : 500190
+
+Running time :                  0:15:47
+Estimated running time :        1:06:47
+Estimated running time left :   0:50:59
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97045 +/- 0.00038  [0.96970  0.97121]
+k-eff (implicit)  = 0.97083 +/- 0.00013  [0.97057  0.97109]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   27 / 240  Source neutrons : 498392
+
+Running time :                  0:16:02
+Estimated running time :        1:06:47
+Estimated running time left :   0:50:45
+
+Estimated relative CPU usage :   781.1%
+
+k-eff (analog)    = 0.97053 +/- 0.00038  [0.96979  0.97127]
+k-eff (implicit)  = 0.97085 +/- 0.00013  [0.97060  0.97111]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   28 / 240  Source neutrons : 499762
+
+Running time :                  0:16:16
+Estimated running time :        1:06:47
+Estimated running time left :   0:50:30
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97058 +/- 0.00037  [0.96986  0.97130]
+k-eff (implicit)  = 0.97086 +/- 0.00013  [0.97061  0.97110]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   29 / 240  Source neutrons : 501747
+
+Running time :                  0:16:30
+Estimated running time :        1:06:47
+Estimated running time left :   0:50:16
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97074 +/- 0.00039  [0.96998  0.97151]
+k-eff (implicit)  = 0.97089 +/- 0.00012  [0.97064  0.97113]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   30 / 240  Source neutrons : 496130
+
+Running time :                  0:16:45
+Estimated running time :        1:06:46
+Estimated running time left :   0:50:01
+
+Estimated relative CPU usage :   781.9%
+
+k-eff (analog)    = 0.97065 +/- 0.00039  [0.96988  0.97141]
+k-eff (implicit)  = 0.97088 +/- 0.00012  [0.97065  0.97112]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   31 / 240  Source neutrons : 502185
+
+Running time :                  0:16:59
+Estimated running time :        1:06:47
+Estimated running time left :   0:49:48
+
+Estimated relative CPU usage :   781.1%
+
+k-eff (analog)    = 0.97069 +/- 0.00038  [0.96995  0.97144]
+k-eff (implicit)  = 0.97092 +/- 0.00012  [0.97068  0.97115]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   32 / 240  Source neutrons : 501478
+
+Running time :                  0:17:13
+Estimated running time :        1:06:47
+Estimated running time left :   0:49:33
+
+Estimated relative CPU usage :   781.0%
+
+k-eff (analog)    = 0.97082 +/- 0.00039  [0.97006  0.97159]
+k-eff (implicit)  = 0.97094 +/- 0.00012  [0.97071  0.97118]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   33 / 240  Source neutrons : 497887
+
+Running time :                  0:17:27
+Estimated running time :        1:06:46
+Estimated running time left :   0:49:18
+
+Estimated relative CPU usage :   781.5%
+
+k-eff (analog)    = 0.97082 +/- 0.00038  [0.97008  0.97157]
+k-eff (implicit)  = 0.97094 +/- 0.00012  [0.97071  0.97117]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   34 / 240  Source neutrons : 501870
+
+Running time :                  0:17:42
+Estimated running time :        1:06:47
+Estimated running time left :   0:49:05
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97093 +/- 0.00038  [0.97018  0.97168]
+k-eff (implicit)  = 0.97094 +/- 0.00011  [0.97071  0.97116]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   35 / 240  Source neutrons : 498165
+
+Running time :                  0:17:56
+Estimated running time :        1:06:46
+Estimated running time left :   0:48:50
+
+Estimated relative CPU usage :   781.1%
+
+k-eff (analog)    = 0.97093 +/- 0.00037  [0.97020  0.97166]
+k-eff (implicit)  = 0.97097 +/- 0.00011  [0.97074  0.97119]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   36 / 240  Source neutrons : 501174
+
+Running time :                  0:18:10
+Estimated running time :        1:06:47
+Estimated running time left :   0:48:36
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97099 +/- 0.00037  [0.97027  0.97171]
+k-eff (implicit)  = 0.97099 +/- 0.00011  [0.97077  0.97121]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   37 / 240  Source neutrons : 499290
+
+Running time :                  0:18:25
+Estimated running time :        1:06:46
+Estimated running time left :   0:48:21
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97101 +/- 0.00036  [0.97031  0.97171]
+k-eff (implicit)  = 0.97101 +/- 0.00011  [0.97079  0.97122]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   38 / 240  Source neutrons : 500109
+
+Running time :                  0:18:39
+Estimated running time :        1:06:46
+Estimated running time left :   0:48:07
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97104 +/- 0.00035  [0.97035  0.97172]
+k-eff (implicit)  = 0.97101 +/- 0.00011  [0.97080  0.97123]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   39 / 240  Source neutrons : 499972
+
+Running time :                  0:18:53
+Estimated running time :        1:06:46
+Estimated running time left :   0:47:52
+
+Estimated relative CPU usage :   781.1%
+
+k-eff (analog)    = 0.97106 +/- 0.00034  [0.97039  0.97173]
+k-eff (implicit)  = 0.97103 +/- 0.00011  [0.97082  0.97124]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   40 / 240  Source neutrons : 500076
+
+Running time :                  0:19:07
+Estimated running time :        1:06:46
+Estimated running time left :   0:47:38
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97108 +/- 0.00033  [0.97043  0.97174]
+k-eff (implicit)  = 0.97102 +/- 0.00010  [0.97082  0.97122]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   41 / 240  Source neutrons : 499824
+
+Running time :                  0:19:22
+Estimated running time :        1:06:46
+Estimated running time left :   0:47:23
+
+Estimated relative CPU usage :   780.7%
+
+k-eff (analog)    = 0.97110 +/- 0.00032  [0.97046  0.97174]
+k-eff (implicit)  = 0.97104 +/- 0.00010  [0.97083  0.97124]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   42 / 240  Source neutrons : 500569
+
+Running time :                  0:19:36
+Estimated running time :        1:06:46
+Estimated running time left :   0:47:09
+
+Estimated relative CPU usage :   781.5%
+
+k-eff (analog)    = 0.97114 +/- 0.00032  [0.97051  0.97177]
+k-eff (implicit)  = 0.97102 +/- 0.00010  [0.97083  0.97122]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   43 / 240  Source neutrons : 497768
+
+Running time :                  0:19:50
+Estimated running time :        1:06:46
+Estimated running time left :   0:46:55
+
+Estimated relative CPU usage :   781.5%
+
+k-eff (analog)    = 0.97108 +/- 0.00032  [0.97046  0.97170]
+k-eff (implicit)  = 0.97102 +/- 0.00010  [0.97083  0.97122]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   44 / 240  Source neutrons : 501375
+
+Running time :                  0:20:05
+Estimated running time :        1:06:46
+Estimated running time left :   0:46:41
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97108 +/- 0.00031  [0.97047  0.97169]
+k-eff (implicit)  = 0.97104 +/- 0.00010  [0.97084  0.97123]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   45 / 240  Source neutrons : 500989
+
+Running time :                  0:20:19
+Estimated running time :        1:06:46
+Estimated running time left :   0:46:26
+
+Estimated relative CPU usage :   781.1%
+
+k-eff (analog)    = 0.97113 +/- 0.00031  [0.97052  0.97173]
+k-eff (implicit)  = 0.97104 +/- 0.00010  [0.97085  0.97122]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   46 / 240  Source neutrons : 498812
+
+Running time :                  0:20:33
+Estimated running time :        1:06:46
+Estimated running time left :   0:46:12
+
+Estimated relative CPU usage :   781.9%
+
+k-eff (analog)    = 0.97112 +/- 0.00030  [0.97053  0.97171]
+k-eff (implicit)  = 0.97103 +/- 0.00009  [0.97084  0.97121]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   47 / 240  Source neutrons : 500554
+
+Running time :                  0:20:47
+Estimated running time :        1:06:46
+Estimated running time left :   0:45:58
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97113 +/- 0.00029  [0.97056  0.97171]
+k-eff (implicit)  = 0.97104 +/- 0.00009  [0.97086  0.97122]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   48 / 240  Source neutrons : 500276
+
+Running time :                  0:21:02
+Estimated running time :        1:06:46
+Estimated running time left :   0:45:43
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97116 +/- 0.00029  [0.97059  0.97173]
+k-eff (implicit)  = 0.97104 +/- 0.00009  [0.97087  0.97122]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   49 / 240  Source neutrons : 500219
+
+Running time :                  0:21:16
+Estimated running time :        1:06:46
+Estimated running time left :   0:45:29
+
+Estimated relative CPU usage :   780.9%
+
+k-eff (analog)    = 0.97119 +/- 0.00029  [0.97063  0.97175]
+k-eff (implicit)  = 0.97106 +/- 0.00009  [0.97088  0.97123]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   50 / 240  Source neutrons : 500820
+
+Running time :                  0:21:30
+Estimated running time :        1:06:46
+Estimated running time left :   0:45:15
+
+Estimated relative CPU usage :   781.2%
+
+k-eff (analog)    = 0.97126 +/- 0.00029  [0.97069  0.97182]
+k-eff (implicit)  = 0.97107 +/- 0.00009  [0.97089  0.97124]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   51 / 240  Source neutrons : 496777
+
+Running time :                  0:21:44
+Estimated running time :        1:06:45
+Estimated running time left :   0:45:00
+
+Estimated relative CPU usage :   781.3%
+
+k-eff (analog)    = 0.97119 +/- 0.00029  [0.97063  0.97176]
+k-eff (implicit)  = 0.97106 +/- 0.00009  [0.97088  0.97123]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   52 / 240  Source neutrons : 500378
+
+Running time :                  0:21:59
+Estimated running time :        1:06:45
+Estimated running time left :   0:44:46
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97115 +/- 0.00029  [0.97059  0.97171]
+k-eff (implicit)  = 0.97104 +/- 0.00009  [0.97087  0.97121]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   53 / 240  Source neutrons : 501308
+
+Running time :                  0:22:13
+Estimated running time :        1:06:46
+Estimated running time left :   0:44:32
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97115 +/- 0.00028  [0.97060  0.97170]
+k-eff (implicit)  = 0.97102 +/- 0.00009  [0.97085  0.97119]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   54 / 240  Source neutrons : 499611
+
+Running time :                  0:22:27
+Estimated running time :        1:06:46
+Estimated running time left :   0:44:18
+
+Estimated relative CPU usage :   781.5%
+
+k-eff (analog)    = 0.97114 +/- 0.00028  [0.97060  0.97168]
+k-eff (implicit)  = 0.97103 +/- 0.00009  [0.97086  0.97120]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   55 / 240  Source neutrons : 499181
+
+Running time :                  0:22:42
+Estimated running time :        1:06:46
+Estimated running time left :   0:44:03
+
+Estimated relative CPU usage :   781.0%
+
+k-eff (analog)    = 0.97111 +/- 0.00027  [0.97057  0.97164]
+k-eff (implicit)  = 0.97103 +/- 0.00009  [0.97086  0.97119]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   56 / 240  Source neutrons : 501941
+
+Running time :                  0:22:56
+Estimated running time :        1:06:46
+Estimated running time left :   0:43:49
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97114 +/- 0.00027  [0.97061  0.97166]
+k-eff (implicit)  = 0.97102 +/- 0.00008  [0.97086  0.97118]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   57 / 240  Source neutrons : 497925
+
+Running time :                  0:23:10
+Estimated running time :        1:06:46
+Estimated running time left :   0:43:35
+
+Estimated relative CPU usage :   780.9%
+
+k-eff (analog)    = 0.97109 +/- 0.00027  [0.97057  0.97162]
+k-eff (implicit)  = 0.97102 +/- 0.00008  [0.97086  0.97118]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   58 / 240  Source neutrons : 501456
+
+Running time :                  0:23:25
+Estimated running time :        1:06:46
+Estimated running time left :   0:43:21
+
+Estimated relative CPU usage :   781.3%
+
+k-eff (analog)    = 0.97110 +/- 0.00026  [0.97059  0.97162]
+k-eff (implicit)  = 0.97103 +/- 0.00008  [0.97087  0.97119]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   59 / 240  Source neutrons : 498822
+
+Running time :                  0:23:39
+Estimated running time :        1:06:46
+Estimated running time left :   0:43:06
+
+Estimated relative CPU usage :   781.1%
+
+k-eff (analog)    = 0.97107 +/- 0.00026  [0.97056  0.97158]
+k-eff (implicit)  = 0.97103 +/- 0.00008  [0.97087  0.97119]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   60 / 240  Source neutrons : 500367
+
+Running time :                  0:23:53
+Estimated running time :        1:06:46
+Estimated running time left :   0:42:52
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97105 +/- 0.00026  [0.97055  0.97156]
+k-eff (implicit)  = 0.97102 +/- 0.00008  [0.97086  0.97118]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   61 / 240  Source neutrons : 500772
+
+Running time :                  0:24:08
+Estimated running time :        1:06:46
+Estimated running time left :   0:42:38
+
+Estimated relative CPU usage :   781.5%
+
+k-eff (analog)    = 0.97106 +/- 0.00025  [0.97057  0.97156]
+k-eff (implicit)  = 0.97098 +/- 0.00009  [0.97081  0.97115]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   62 / 240  Source neutrons : 499834
+
+Running time :                  0:24:22
+Estimated running time :        1:06:46
+Estimated running time left :   0:42:23
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97106 +/- 0.00025  [0.97058  0.97155]
+k-eff (implicit)  = 0.97098 +/- 0.00008  [0.97082  0.97115]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   63 / 240  Source neutrons : 500488
+
+Running time :                  0:24:36
+Estimated running time :        1:06:46
+Estimated running time left :   0:42:09
+
+Estimated relative CPU usage :   780.6%
+
+k-eff (analog)    = 0.97108 +/- 0.00025  [0.97060  0.97156]
+k-eff (implicit)  = 0.97100 +/- 0.00009  [0.97083  0.97117]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   64 / 240  Source neutrons : 498959
+
+Running time :                  0:24:50
+Estimated running time :        1:06:45
+Estimated running time left :   0:41:55
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97106 +/- 0.00024  [0.97059  0.97154]
+k-eff (implicit)  = 0.97101 +/- 0.00008  [0.97085  0.97118]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   65 / 240  Source neutrons : 500928
+
+Running time :                  0:25:05
+Estimated running time :        1:06:45
+Estimated running time left :   0:41:40
+
+Estimated relative CPU usage :   780.9%
+
+k-eff (analog)    = 0.97108 +/- 0.00024  [0.97061  0.97155]
+k-eff (implicit)  = 0.97103 +/- 0.00009  [0.97086  0.97120]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   66 / 240  Source neutrons : 500816
+
+Running time :                  0:25:19
+Estimated running time :        1:06:45
+Estimated running time left :   0:41:26
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97111 +/- 0.00024  [0.97065  0.97158]
+k-eff (implicit)  = 0.97104 +/- 0.00008  [0.97087  0.97120]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   67 / 240  Source neutrons : 498527
+
+Running time :                  0:25:33
+Estimated running time :        1:06:45
+Estimated running time left :   0:41:11
+
+Estimated relative CPU usage :   781.0%
+
+k-eff (analog)    = 0.97111 +/- 0.00023  [0.97065  0.97157]
+k-eff (implicit)  = 0.97105 +/- 0.00008  [0.97089  0.97122]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   68 / 240  Source neutrons : 500599
+
+Running time :                  0:25:47
+Estimated running time :        1:06:45
+Estimated running time left :   0:40:57
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97112 +/- 0.00023  [0.97066  0.97157]
+k-eff (implicit)  = 0.97107 +/- 0.00008  [0.97090  0.97123]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   69 / 240  Source neutrons : 499606
+
+Running time :                  0:26:02
+Estimated running time :        1:06:45
+Estimated running time left :   0:40:43
+
+Estimated relative CPU usage :   780.9%
+
+k-eff (analog)    = 0.97112 +/- 0.00023  [0.97067  0.97156]
+k-eff (implicit)  = 0.97107 +/- 0.00008  [0.97091  0.97124]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   70 / 240  Source neutrons : 499630
+
+Running time :                  0:26:16
+Estimated running time :        1:06:45
+Estimated running time left :   0:40:28
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97110 +/- 0.00022  [0.97066  0.97154]
+k-eff (implicit)  = 0.97107 +/- 0.00008  [0.97091  0.97123]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   71 / 240  Source neutrons : 500481
+
+Running time :                  0:26:30
+Estimated running time :        1:06:45
+Estimated running time left :   0:40:14
+
+Estimated relative CPU usage :   781.0%
+
+k-eff (analog)    = 0.97111 +/- 0.00022  [0.97067  0.97154]
+k-eff (implicit)  = 0.97107 +/- 0.00008  [0.97091  0.97123]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   72 / 240  Source neutrons : 500301
+
+Running time :                  0:26:44
+Estimated running time :        1:06:45
+Estimated running time left :   0:40:00
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97112 +/- 0.00022  [0.97069  0.97154]
+k-eff (implicit)  = 0.97107 +/- 0.00008  [0.97091  0.97123]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   73 / 240  Source neutrons : 499343
+
+Running time :                  0:26:59
+Estimated running time :        1:06:44
+Estimated running time left :   0:39:45
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97111 +/- 0.00022  [0.97068  0.97153]
+k-eff (implicit)  = 0.97106 +/- 0.00008  [0.97091  0.97122]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   74 / 240  Source neutrons : 500644
+
+Running time :                  0:27:13
+Estimated running time :        1:06:44
+Estimated running time left :   0:39:31
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97112 +/- 0.00021  [0.97070  0.97153]
+k-eff (implicit)  = 0.97107 +/- 0.00008  [0.97092  0.97123]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   75 / 240  Source neutrons : 501246
+
+Running time :                  0:27:27
+Estimated running time :        1:06:45
+Estimated running time left :   0:39:17
+
+Estimated relative CPU usage :   781.0%
+
+k-eff (analog)    = 0.97116 +/- 0.00021  [0.97074  0.97158]
+k-eff (implicit)  = 0.97107 +/- 0.00008  [0.97092  0.97123]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   76 / 240  Source neutrons : 497980
+
+Running time :                  0:27:41
+Estimated running time :        1:06:44
+Estimated running time left :   0:39:02
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97115 +/- 0.00021  [0.97073  0.97156]
+k-eff (implicit)  = 0.97108 +/- 0.00008  [0.97093  0.97123]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   77 / 240  Source neutrons : 499498
+
+Running time :                  0:27:56
+Estimated running time :        1:06:44
+Estimated running time left :   0:38:48
+
+Estimated relative CPU usage :   781.5%
+
+k-eff (analog)    = 0.97112 +/- 0.00021  [0.97071  0.97153]
+k-eff (implicit)  = 0.97108 +/- 0.00008  [0.97093  0.97123]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   78 / 240  Source neutrons : 500205
+
+Running time :                  0:28:10
+Estimated running time :        1:06:44
+Estimated running time left :   0:38:34
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97110 +/- 0.00021  [0.97070  0.97151]
+k-eff (implicit)  = 0.97108 +/- 0.00008  [0.97093  0.97123]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   79 / 240  Source neutrons : 500248
+
+Running time :                  0:28:24
+Estimated running time :        1:06:44
+Estimated running time left :   0:38:19
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97109 +/- 0.00021  [0.97069  0.97150]
+k-eff (implicit)  = 0.97108 +/- 0.00007  [0.97093  0.97122]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   80 / 240  Source neutrons : 497870
+
+Running time :                  0:28:38
+Estimated running time :        1:06:44
+Estimated running time left :   0:38:05
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97103 +/- 0.00021  [0.97061  0.97145]
+k-eff (implicit)  = 0.97107 +/- 0.00007  [0.97092  0.97121]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   81 / 240  Source neutrons : 502049
+
+Running time :                  0:28:53
+Estimated running time :        1:06:44
+Estimated running time left :   0:37:51
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97102 +/- 0.00021  [0.97060  0.97143]
+k-eff (implicit)  = 0.97107 +/- 0.00007  [0.97093  0.97121]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   82 / 240  Source neutrons : 500197
+
+Running time :                  0:29:07
+Estimated running time :        1:06:44
+Estimated running time left :   0:37:36
+
+Estimated relative CPU usage :   781.3%
+
+k-eff (analog)    = 0.97101 +/- 0.00021  [0.97060  0.97142]
+k-eff (implicit)  = 0.97108 +/- 0.00007  [0.97093  0.97122]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   83 / 240  Source neutrons : 500683
+
+Running time :                  0:29:21
+Estimated running time :        1:06:44
+Estimated running time left :   0:37:22
+
+Estimated relative CPU usage :   780.9%
+
+k-eff (analog)    = 0.97102 +/- 0.00021  [0.97061  0.97142]
+k-eff (implicit)  = 0.97108 +/- 0.00007  [0.97094  0.97122]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   84 / 240  Source neutrons : 500283
+
+Running time :                  0:29:36
+Estimated running time :        1:06:44
+Estimated running time left :   0:37:08
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97103 +/- 0.00020  [0.97063  0.97143]
+k-eff (implicit)  = 0.97108 +/- 0.00007  [0.97094  0.97122]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   85 / 240  Source neutrons : 499803
+
+Running time :                  0:29:50
+Estimated running time :        1:06:44
+Estimated running time left :   0:36:54
+
+Estimated relative CPU usage :   781.4%
+
+k-eff (analog)    = 0.97104 +/- 0.00020  [0.97065  0.97144]
+k-eff (implicit)  = 0.97108 +/- 0.00007  [0.97094  0.97121]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   86 / 240  Source neutrons : 500373
+
+Running time :                  0:30:04
+Estimated running time :        1:06:44
+Estimated running time left :   0:36:39
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97106 +/- 0.00020  [0.97067  0.97145]
+k-eff (implicit)  = 0.97108 +/- 0.00007  [0.97094  0.97121]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   87 / 240  Source neutrons : 497932
+
+Running time :                  0:30:18
+Estimated running time :        1:06:43
+Estimated running time left :   0:36:25
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97103 +/- 0.00020  [0.97064  0.97142]
+k-eff (implicit)  = 0.97109 +/- 0.00007  [0.97096  0.97123]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   88 / 240  Source neutrons : 500971
+
+Running time :                  0:30:33
+Estimated running time :        1:06:43
+Estimated running time left :   0:36:10
+
+Estimated relative CPU usage :   781.3%
+
+k-eff (analog)    = 0.97103 +/- 0.00020  [0.97064  0.97141]
+k-eff (implicit)  = 0.97109 +/- 0.00007  [0.97095  0.97123]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   89 / 240  Source neutrons : 500106
+
+Running time :                  0:30:47
+Estimated running time :        1:06:43
+Estimated running time left :   0:35:56
+
+Estimated relative CPU usage :   781.2%
+
+k-eff (analog)    = 0.97102 +/- 0.00020  [0.97064  0.97141]
+k-eff (implicit)  = 0.97108 +/- 0.00007  [0.97095  0.97122]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   90 / 240  Source neutrons : 500349
+
+Running time :                  0:31:01
+Estimated running time :        1:06:43
+Estimated running time left :   0:35:42
+
+Estimated relative CPU usage :   781.4%
+
+k-eff (analog)    = 0.97103 +/- 0.00019  [0.97065  0.97140]
+k-eff (implicit)  = 0.97108 +/- 0.00007  [0.97095  0.97122]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   91 / 240  Source neutrons : 500672
+
+Running time :                  0:31:15
+Estimated running time :        1:06:43
+Estimated running time left :   0:35:27
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97104 +/- 0.00019  [0.97067  0.97142]
+k-eff (implicit)  = 0.97108 +/- 0.00007  [0.97094  0.97121]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   92 / 240  Source neutrons : 500341
+
+Running time :                  0:31:30
+Estimated running time :        1:06:43
+Estimated running time left :   0:35:13
+
+Estimated relative CPU usage :   781.4%
+
+k-eff (analog)    = 0.97107 +/- 0.00019  [0.97069  0.97144]
+k-eff (implicit)  = 0.97108 +/- 0.00007  [0.97094  0.97121]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   93 / 240  Source neutrons : 499546
+
+Running time :                  0:31:44
+Estimated running time :        1:06:43
+Estimated running time left :   0:34:59
+
+Estimated relative CPU usage :   781.4%
+
+k-eff (analog)    = 0.97108 +/- 0.00019  [0.97071  0.97146]
+k-eff (implicit)  = 0.97109 +/- 0.00007  [0.97095  0.97122]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   94 / 240  Source neutrons : 499646
+
+Running time :                  0:31:58
+Estimated running time :        1:06:43
+Estimated running time left :   0:34:44
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97109 +/- 0.00019  [0.97072  0.97146]
+k-eff (implicit)  = 0.97109 +/- 0.00007  [0.97095  0.97122]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   95 / 240  Source neutrons : 499692
+
+Running time :                  0:32:12
+Estimated running time :        1:06:43
+Estimated running time left :   0:34:30
+
+Estimated relative CPU usage :   781.3%
+
+k-eff (analog)    = 0.97109 +/- 0.00019  [0.97073  0.97146]
+k-eff (implicit)  = 0.97109 +/- 0.00007  [0.97096  0.97122]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   96 / 240  Source neutrons : 500684
+
+Running time :                  0:32:27
+Estimated running time :        1:06:43
+Estimated running time left :   0:34:16
+
+Estimated relative CPU usage :   781.3%
+
+k-eff (analog)    = 0.97110 +/- 0.00018  [0.97074  0.97147]
+k-eff (implicit)  = 0.97108 +/- 0.00007  [0.97096  0.97121]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   97 / 240  Source neutrons : 498244
+
+Running time :                  0:32:41
+Estimated running time :        1:06:43
+Estimated running time left :   0:34:01
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97108 +/- 0.00018  [0.97072  0.97144]
+k-eff (implicit)  = 0.97109 +/- 0.00007  [0.97096  0.97122]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   98 / 240  Source neutrons : 501520
+
+Running time :                  0:32:55
+Estimated running time :        1:06:43
+Estimated running time left :   0:33:47
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97109 +/- 0.00018  [0.97074  0.97145]
+k-eff (implicit)  = 0.97108 +/- 0.00007  [0.97095  0.97121]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle   99 / 240  Source neutrons : 498418
+
+Running time :                  0:33:09
+Estimated running time :        1:06:42
+Estimated running time left :   0:33:33
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97107 +/- 0.00018  [0.97071  0.97143]
+k-eff (implicit)  = 0.97108 +/- 0.00007  [0.97095  0.97121]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  100 / 240  Source neutrons : 499397
+
+Running time :                  0:33:23
+Estimated running time :        1:06:42
+Estimated running time left :   0:33:18
+
+Estimated relative CPU usage :   781.5%
+
+k-eff (analog)    = 0.97104 +/- 0.00018  [0.97068  0.97140]
+k-eff (implicit)  = 0.97108 +/- 0.00006  [0.97095  0.97121]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  101 / 240  Source neutrons : 501906
+
+Running time :                  0:33:38
+Estimated running time :        1:06:42
+Estimated running time left :   0:33:04
+
+Estimated relative CPU usage :   781.1%
+
+k-eff (analog)    = 0.97104 +/- 0.00018  [0.97069  0.97140]
+k-eff (implicit)  = 0.97108 +/- 0.00006  [0.97095  0.97120]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  102 / 240  Source neutrons : 499704
+
+Running time :                  0:33:52
+Estimated running time :        1:06:42
+Estimated running time left :   0:32:50
+
+Estimated relative CPU usage :   780.6%
+
+k-eff (analog)    = 0.97104 +/- 0.00018  [0.97069  0.97139]
+k-eff (implicit)  = 0.97108 +/- 0.00006  [0.97095  0.97120]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  103 / 240  Source neutrons : 499089
+
+Running time :                  0:34:06
+Estimated running time :        1:06:42
+Estimated running time left :   0:32:35
+
+Estimated relative CPU usage :   781.2%
+
+k-eff (analog)    = 0.97102 +/- 0.00018  [0.97067  0.97137]
+k-eff (implicit)  = 0.97107 +/- 0.00006  [0.97095  0.97119]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  104 / 240  Source neutrons : 501706
+
+Running time :                  0:34:20
+Estimated running time :        1:06:42
+Estimated running time left :   0:32:21
+
+Estimated relative CPU usage :   781.5%
+
+k-eff (analog)    = 0.97104 +/- 0.00018  [0.97069  0.97138]
+k-eff (implicit)  = 0.97107 +/- 0.00006  [0.97095  0.97119]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  105 / 240  Source neutrons : 499551
+
+Running time :                  0:34:35
+Estimated running time :        1:06:42
+Estimated running time left :   0:32:07
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97104 +/- 0.00018  [0.97069  0.97139]
+k-eff (implicit)  = 0.97107 +/- 0.00006  [0.97095  0.97119]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  106 / 240  Source neutrons : 499838
+
+Running time :                  0:34:49
+Estimated running time :        1:06:42
+Estimated running time left :   0:31:52
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97104 +/- 0.00017  [0.97070  0.97138]
+k-eff (implicit)  = 0.97107 +/- 0.00006  [0.97095  0.97119]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  107 / 240  Source neutrons : 501649
+
+Running time :                  0:35:03
+Estimated running time :        1:06:42
+Estimated running time left :   0:31:38
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97107 +/- 0.00018  [0.97073  0.97142]
+k-eff (implicit)  = 0.97107 +/- 0.00006  [0.97095  0.97119]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  108 / 240  Source neutrons : 498139
+
+Running time :                  0:35:17
+Estimated running time :        1:06:42
+Estimated running time left :   0:31:24
+
+Estimated relative CPU usage :   781.4%
+
+k-eff (analog)    = 0.97107 +/- 0.00017  [0.97073  0.97141]
+k-eff (implicit)  = 0.97108 +/- 0.00006  [0.97096  0.97120]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  109 / 240  Source neutrons : 501633
+
+Running time :                  0:35:32
+Estimated running time :        1:06:42
+Estimated running time left :   0:31:10
+
+Estimated relative CPU usage :   781.3%
+
+k-eff (analog)    = 0.97110 +/- 0.00017  [0.97076  0.97144]
+k-eff (implicit)  = 0.97107 +/- 0.00006  [0.97095  0.97119]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  110 / 240  Source neutrons : 497531
+
+Running time :                  0:35:46
+Estimated running time :        1:06:42
+Estimated running time left :   0:30:55
+
+Estimated relative CPU usage :   781.5%
+
+k-eff (analog)    = 0.97108 +/- 0.00017  [0.97074  0.97142]
+k-eff (implicit)  = 0.97106 +/- 0.00006  [0.97094  0.97118]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  111 / 240  Source neutrons : 500183
+
+Running time :                  0:36:00
+Estimated running time :        1:06:42
+Estimated running time left :   0:30:41
+
+Estimated relative CPU usage :   781.0%
+
+k-eff (analog)    = 0.97107 +/- 0.00017  [0.97073  0.97140]
+k-eff (implicit)  = 0.97107 +/- 0.00006  [0.97095  0.97119]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  112 / 240  Source neutrons : 500779
+
+Running time :                  0:36:14
+Estimated running time :        1:06:42
+Estimated running time left :   0:30:27
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97107 +/- 0.00017  [0.97073  0.97140]
+k-eff (implicit)  = 0.97108 +/- 0.00006  [0.97096  0.97119]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  113 / 240  Source neutrons : 498587
+
+Running time :                  0:36:29
+Estimated running time :        1:06:42
+Estimated running time left :   0:30:12
+
+Estimated relative CPU usage :   781.3%
+
+k-eff (analog)    = 0.97104 +/- 0.00017  [0.97070  0.97138]
+k-eff (implicit)  = 0.97107 +/- 0.00006  [0.97095  0.97119]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  114 / 240  Source neutrons : 500968
+
+Running time :                  0:36:43
+Estimated running time :        1:06:41
+Estimated running time left :   0:29:58
+
+Estimated relative CPU usage :   781.1%
+
+k-eff (analog)    = 0.97103 +/- 0.00017  [0.97070  0.97137]
+k-eff (implicit)  = 0.97107 +/- 0.00006  [0.97096  0.97119]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  115 / 240  Source neutrons : 501440
+
+Running time :                  0:36:57
+Estimated running time :        1:06:41
+Estimated running time left :   0:29:44
+
+Estimated relative CPU usage :   781.3%
+
+k-eff (analog)    = 0.97105 +/- 0.00017  [0.97072  0.97138]
+k-eff (implicit)  = 0.97108 +/- 0.00006  [0.97096  0.97119]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  116 / 240  Source neutrons : 497979
+
+Running time :                  0:37:11
+Estimated running time :        1:06:41
+Estimated running time left :   0:29:29
+
+Estimated relative CPU usage :   781.2%
+
+k-eff (analog)    = 0.97103 +/- 0.00017  [0.97070  0.97136]
+k-eff (implicit)  = 0.97108 +/- 0.00006  [0.97097  0.97120]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  117 / 240  Source neutrons : 501300
+
+Running time :                  0:37:26
+Estimated running time :        1:06:41
+Estimated running time left :   0:29:15
+
+Estimated relative CPU usage :   781.5%
+
+k-eff (analog)    = 0.97104 +/- 0.00017  [0.97071  0.97136]
+k-eff (implicit)  = 0.97109 +/- 0.00006  [0.97097  0.97120]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  118 / 240  Source neutrons : 500379
+
+Running time :                  0:37:40
+Estimated running time :        1:06:41
+Estimated running time left :   0:29:01
+
+Estimated relative CPU usage :   781.4%
+
+k-eff (analog)    = 0.97105 +/- 0.00017  [0.97072  0.97137]
+k-eff (implicit)  = 0.97109 +/- 0.00006  [0.97098  0.97120]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  119 / 240  Source neutrons : 499207
+
+Running time :                  0:37:54
+Estimated running time :        1:06:41
+Estimated running time left :   0:28:46
+
+Estimated relative CPU usage :   781.2%
+
+k-eff (analog)    = 0.97104 +/- 0.00017  [0.97072  0.97137]
+k-eff (implicit)  = 0.97109 +/- 0.00006  [0.97098  0.97120]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  120 / 240  Source neutrons : 500221
+
+Running time :                  0:38:08
+Estimated running time :        1:06:41
+Estimated running time left :   0:28:32
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97105 +/- 0.00016  [0.97072  0.97137]
+k-eff (implicit)  = 0.97108 +/- 0.00006  [0.97097  0.97120]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  121 / 240  Source neutrons : 499264
+
+Running time :                  0:38:23
+Estimated running time :        1:06:41
+Estimated running time left :   0:28:18
+
+Estimated relative CPU usage :   781.2%
+
+k-eff (analog)    = 0.97103 +/- 0.00016  [0.97072  0.97135]
+k-eff (implicit)  = 0.97108 +/- 0.00006  [0.97097  0.97119]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  122 / 240  Source neutrons : 500114
+
+Running time :                  0:38:37
+Estimated running time :        1:06:41
+Estimated running time left :   0:28:04
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97103 +/- 0.00016  [0.97071  0.97134]
+k-eff (implicit)  = 0.97108 +/- 0.00006  [0.97097  0.97119]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  123 / 240  Source neutrons : 500494
+
+Running time :                  0:38:51
+Estimated running time :        1:06:41
+Estimated running time left :   0:27:49
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97102 +/- 0.00016  [0.97071  0.97134]
+k-eff (implicit)  = 0.97107 +/- 0.00006  [0.97096  0.97118]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  124 / 240  Source neutrons : 500607
+
+Running time :                  0:39:05
+Estimated running time :        1:06:41
+Estimated running time left :   0:27:35
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97103 +/- 0.00016  [0.97072  0.97135]
+k-eff (implicit)  = 0.97107 +/- 0.00006  [0.97096  0.97118]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  125 / 240  Source neutrons : 499791
+
+Running time :                  0:39:20
+Estimated running time :        1:06:41
+Estimated running time left :   0:27:21
+
+Estimated relative CPU usage :   781.5%
+
+k-eff (analog)    = 0.97104 +/- 0.00016  [0.97073  0.97135]
+k-eff (implicit)  = 0.97107 +/- 0.00006  [0.97096  0.97118]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  126 / 240  Source neutrons : 500482
+
+Running time :                  0:39:34
+Estimated running time :        1:06:41
+Estimated running time left :   0:27:06
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97105 +/- 0.00016  [0.97074  0.97136]
+k-eff (implicit)  = 0.97108 +/- 0.00006  [0.97097  0.97118]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  127 / 240  Source neutrons : 498643
+
+Running time :                  0:39:48
+Estimated running time :        1:06:40
+Estimated running time left :   0:26:52
+
+Estimated relative CPU usage :   781.4%
+
+k-eff (analog)    = 0.97104 +/- 0.00016  [0.97074  0.97135]
+k-eff (implicit)  = 0.97107 +/- 0.00006  [0.97097  0.97118]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  128 / 240  Source neutrons : 499811
+
+Running time :                  0:40:02
+Estimated running time :        1:06:40
+Estimated running time left :   0:26:38
+
+Estimated relative CPU usage :   781.2%
+
+k-eff (analog)    = 0.97103 +/- 0.00016  [0.97073  0.97134]
+k-eff (implicit)  = 0.97107 +/- 0.00006  [0.97096  0.97117]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  129 / 240  Source neutrons : 498860
+
+Running time :                  0:40:16
+Estimated running time :        1:06:40
+Estimated running time left :   0:26:23
+
+Estimated relative CPU usage :   781.5%
+
+k-eff (analog)    = 0.97100 +/- 0.00016  [0.97070  0.97131]
+k-eff (implicit)  = 0.97107 +/- 0.00005  [0.97096  0.97118]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  130 / 240  Source neutrons : 500642
+
+Running time :                  0:40:31
+Estimated running time :        1:06:40
+Estimated running time left :   0:26:09
+
+Estimated relative CPU usage :   780.5%
+
+k-eff (analog)    = 0.97099 +/- 0.00016  [0.97068  0.97129]
+k-eff (implicit)  = 0.97107 +/- 0.00005  [0.97096  0.97118]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  131 / 240  Source neutrons : 501121
+
+Running time :                  0:40:45
+Estimated running time :        1:06:40
+Estimated running time left :   0:25:55
+
+Estimated relative CPU usage :   781.1%
+
+k-eff (analog)    = 0.97098 +/- 0.00016  [0.97068  0.97129]
+k-eff (implicit)  = 0.97107 +/- 0.00005  [0.97097  0.97118]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  132 / 240  Source neutrons : 499735
+
+Running time :                  0:40:59
+Estimated running time :        1:06:40
+Estimated running time left :   0:25:40
+
+Estimated relative CPU usage :   781.1%
+
+k-eff (analog)    = 0.97098 +/- 0.00015  [0.97068  0.97128]
+k-eff (implicit)  = 0.97107 +/- 0.00005  [0.97097  0.97118]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  133 / 240  Source neutrons : 498942
+
+Running time :                  0:41:13
+Estimated running time :        1:06:40
+Estimated running time left :   0:25:26
+
+Estimated relative CPU usage :   781.4%
+
+k-eff (analog)    = 0.97096 +/- 0.00015  [0.97066  0.97126]
+k-eff (implicit)  = 0.97107 +/- 0.00005  [0.97096  0.97117]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  134 / 240  Source neutrons : 500548
+
+Running time :                  0:41:28
+Estimated running time :        1:06:40
+Estimated running time left :   0:25:12
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97095 +/- 0.00015  [0.97064  0.97125]
+k-eff (implicit)  = 0.97107 +/- 0.00005  [0.97097  0.97118]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  135 / 240  Source neutrons : 502682
+
+Running time :                  0:41:42
+Estimated running time :        1:06:40
+Estimated running time left :   0:24:58
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97097 +/- 0.00015  [0.97067  0.97128]
+k-eff (implicit)  = 0.97108 +/- 0.00005  [0.97097  0.97118]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  136 / 240  Source neutrons : 497822
+
+Running time :                  0:41:56
+Estimated running time :        1:06:40
+Estimated running time left :   0:24:43
+
+Estimated relative CPU usage :   781.4%
+
+k-eff (analog)    = 0.97097 +/- 0.00015  [0.97067  0.97127]
+k-eff (implicit)  = 0.97108 +/- 0.00005  [0.97098  0.97118]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  137 / 240  Source neutrons : 499866
+
+Running time :                  0:42:10
+Estimated running time :        1:06:40
+Estimated running time left :   0:24:29
+
+Estimated relative CPU usage :   781.4%
+
+k-eff (analog)    = 0.97096 +/- 0.00015  [0.97066  0.97126]
+k-eff (implicit)  = 0.97108 +/- 0.00005  [0.97098  0.97118]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  138 / 240  Source neutrons : 498528
+
+Running time :                  0:42:24
+Estimated running time :        1:06:40
+Estimated running time left :   0:24:15
+
+Estimated relative CPU usage :   781.5%
+
+k-eff (analog)    = 0.97093 +/- 0.00015  [0.97063  0.97124]
+k-eff (implicit)  = 0.97108 +/- 0.00005  [0.97098  0.97118]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  139 / 240  Source neutrons : 503491
+
+Running time :                  0:42:39
+Estimated running time :        1:06:40
+Estimated running time left :   0:24:00
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97095 +/- 0.00015  [0.97065  0.97126]
+k-eff (implicit)  = 0.97108 +/- 0.00005  [0.97098  0.97118]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  140 / 240  Source neutrons : 499387
+
+Running time :                  0:42:53
+Estimated running time :        1:06:39
+Estimated running time left :   0:23:46
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97097 +/- 0.00015  [0.97066  0.97127]
+k-eff (implicit)  = 0.97109 +/- 0.00005  [0.97099  0.97119]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  141 / 240  Source neutrons : 497888
+
+Running time :                  0:43:07
+Estimated running time :        1:06:39
+Estimated running time left :   0:23:32
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97095 +/- 0.00015  [0.97065  0.97125]
+k-eff (implicit)  = 0.97109 +/- 0.00005  [0.97099  0.97119]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  142 / 240  Source neutrons : 500940
+
+Running time :                  0:43:21
+Estimated running time :        1:06:39
+Estimated running time left :   0:23:17
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97095 +/- 0.00015  [0.97065  0.97125]
+k-eff (implicit)  = 0.97109 +/- 0.00005  [0.97099  0.97119]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  143 / 240  Source neutrons : 499387
+
+Running time :                  0:43:36
+Estimated running time :        1:06:39
+Estimated running time left :   0:23:03
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97093 +/- 0.00015  [0.97064  0.97123]
+k-eff (implicit)  = 0.97109 +/- 0.00005  [0.97099  0.97119]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  144 / 240  Source neutrons : 499945
+
+Running time :                  0:43:50
+Estimated running time :        1:06:39
+Estimated running time left :   0:22:49
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97092 +/- 0.00015  [0.97062  0.97122]
+k-eff (implicit)  = 0.97108 +/- 0.00005  [0.97098  0.97118]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  145 / 240  Source neutrons : 501419
+
+Running time :                  0:44:04
+Estimated running time :        1:06:39
+Estimated running time left :   0:22:35
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97093 +/- 0.00015  [0.97063  0.97122]
+k-eff (implicit)  = 0.97109 +/- 0.00005  [0.97099  0.97119]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  146 / 240  Source neutrons : 500601
+
+Running time :                  0:44:18
+Estimated running time :        1:06:39
+Estimated running time left :   0:22:20
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97094 +/- 0.00015  [0.97065  0.97124]
+k-eff (implicit)  = 0.97109 +/- 0.00005  [0.97099  0.97119]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  147 / 240  Source neutrons : 500139
+
+Running time :                  0:44:33
+Estimated running time :        1:06:39
+Estimated running time left :   0:22:06
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97096 +/- 0.00015  [0.97066  0.97125]
+k-eff (implicit)  = 0.97109 +/- 0.00005  [0.97099  0.97118]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  148 / 240  Source neutrons : 498861
+
+Running time :                  0:44:47
+Estimated running time :        1:06:39
+Estimated running time left :   0:21:52
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97096 +/- 0.00015  [0.97067  0.97125]
+k-eff (implicit)  = 0.97109 +/- 0.00005  [0.97099  0.97119]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  149 / 240  Source neutrons : 500347
+
+Running time :                  0:45:01
+Estimated running time :        1:06:39
+Estimated running time left :   0:21:37
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97096 +/- 0.00015  [0.97067  0.97126]
+k-eff (implicit)  = 0.97108 +/- 0.00005  [0.97098  0.97118]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  150 / 240  Source neutrons : 500677
+
+Running time :                  0:45:15
+Estimated running time :        1:06:39
+Estimated running time left :   0:21:23
+
+Estimated relative CPU usage :   781.9%
+
+k-eff (analog)    = 0.97098 +/- 0.00015  [0.97069  0.97127]
+k-eff (implicit)  = 0.97107 +/- 0.00005  [0.97097  0.97117]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  151 / 240  Source neutrons : 497343
+
+Running time :                  0:45:29
+Estimated running time :        1:06:39
+Estimated running time left :   0:21:09
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97096 +/- 0.00015  [0.97067  0.97125]
+k-eff (implicit)  = 0.97107 +/- 0.00005  [0.97097  0.97117]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  152 / 240  Source neutrons : 500837
+
+Running time :                  0:45:43
+Estimated running time :        1:06:38
+Estimated running time left :   0:20:54
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97095 +/- 0.00015  [0.97066  0.97124]
+k-eff (implicit)  = 0.97106 +/- 0.00005  [0.97097  0.97116]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  153 / 240  Source neutrons : 500605
+
+Running time :                  0:45:58
+Estimated running time :        1:06:38
+Estimated running time left :   0:20:40
+
+Estimated relative CPU usage :   781.3%
+
+k-eff (analog)    = 0.97095 +/- 0.00015  [0.97066  0.97124]
+k-eff (implicit)  = 0.97106 +/- 0.00005  [0.97096  0.97116]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  154 / 240  Source neutrons : 499366
+
+Running time :                  0:46:12
+Estimated running time :        1:06:38
+Estimated running time left :   0:20:26
+
+Estimated relative CPU usage :   781.9%
+
+k-eff (analog)    = 0.97094 +/- 0.00015  [0.97065  0.97122]
+k-eff (implicit)  = 0.97105 +/- 0.00005  [0.97095  0.97115]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  155 / 240  Source neutrons : 499759
+
+Running time :                  0:46:26
+Estimated running time :        1:06:38
+Estimated running time left :   0:20:12
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97093 +/- 0.00015  [0.97064  0.97121]
+k-eff (implicit)  = 0.97105 +/- 0.00005  [0.97095  0.97115]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  156 / 240  Source neutrons : 500935
+
+Running time :                  0:46:40
+Estimated running time :        1:06:38
+Estimated running time left :   0:19:57
+
+Estimated relative CPU usage :   781.4%
+
+k-eff (analog)    = 0.97093 +/- 0.00014  [0.97064  0.97121]
+k-eff (implicit)  = 0.97105 +/- 0.00005  [0.97095  0.97115]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  157 / 240  Source neutrons : 500129
+
+Running time :                  0:46:55
+Estimated running time :        1:06:38
+Estimated running time left :   0:19:43
+
+Estimated relative CPU usage :   780.8%
+
+k-eff (analog)    = 0.97093 +/- 0.00014  [0.97064  0.97121]
+k-eff (implicit)  = 0.97105 +/- 0.00005  [0.97095  0.97115]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  158 / 240  Source neutrons : 498449
+
+Running time :                  0:47:09
+Estimated running time :        1:06:38
+Estimated running time left :   0:19:29
+
+Estimated relative CPU usage :   781.4%
+
+k-eff (analog)    = 0.97091 +/- 0.00014  [0.97063  0.97119]
+k-eff (implicit)  = 0.97105 +/- 0.00005  [0.97096  0.97115]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  159 / 240  Source neutrons : 502474
+
+Running time :                  0:47:23
+Estimated running time :        1:06:38
+Estimated running time left :   0:19:15
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97092 +/- 0.00014  [0.97064  0.97120]
+k-eff (implicit)  = 0.97105 +/- 0.00005  [0.97095  0.97115]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  160 / 240  Source neutrons : 500752
+
+Running time :                  0:47:37
+Estimated running time :        1:06:38
+Estimated running time left :   0:19:00
+
+Estimated relative CPU usage :   781.9%
+
+k-eff (analog)    = 0.97094 +/- 0.00014  [0.97066  0.97122]
+k-eff (implicit)  = 0.97105 +/- 0.00005  [0.97095  0.97115]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  161 / 240  Source neutrons : 497205
+
+Running time :                  0:47:51
+Estimated running time :        1:06:38
+Estimated running time left :   0:18:46
+
+Estimated relative CPU usage :   781.4%
+
+k-eff (analog)    = 0.97093 +/- 0.00014  [0.97065  0.97121]
+k-eff (implicit)  = 0.97105 +/- 0.00005  [0.97095  0.97115]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  162 / 240  Source neutrons : 499848
+
+Running time :                  0:48:06
+Estimated running time :        1:06:38
+Estimated running time left :   0:18:32
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97091 +/- 0.00014  [0.97063  0.97120]
+k-eff (implicit)  = 0.97104 +/- 0.00005  [0.97095  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  163 / 240  Source neutrons : 501205
+
+Running time :                  0:48:20
+Estimated running time :        1:06:38
+Estimated running time left :   0:18:17
+
+Estimated relative CPU usage :   780.8%
+
+k-eff (analog)    = 0.97091 +/- 0.00014  [0.97063  0.97119]
+k-eff (implicit)  = 0.97104 +/- 0.00005  [0.97094  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  164 / 240  Source neutrons : 500609
+
+Running time :                  0:48:34
+Estimated running time :        1:06:38
+Estimated running time left :   0:18:03
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97092 +/- 0.00014  [0.97064  0.97120]
+k-eff (implicit)  = 0.97104 +/- 0.00005  [0.97095  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  165 / 240  Source neutrons : 498538
+
+Running time :                  0:48:48
+Estimated running time :        1:06:38
+Estimated running time left :   0:17:49
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97091 +/- 0.00014  [0.97063  0.97119]
+k-eff (implicit)  = 0.97104 +/- 0.00005  [0.97095  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  166 / 240  Source neutrons : 501315
+
+Running time :                  0:49:02
+Estimated running time :        1:06:38
+Estimated running time left :   0:17:35
+
+Estimated relative CPU usage :   781.5%
+
+k-eff (analog)    = 0.97092 +/- 0.00014  [0.97064  0.97119]
+k-eff (implicit)  = 0.97104 +/- 0.00005  [0.97095  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  167 / 240  Source neutrons : 500945
+
+Running time :                  0:49:17
+Estimated running time :        1:06:37
+Estimated running time left :   0:17:20
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97093 +/- 0.00014  [0.97066  0.97121]
+k-eff (implicit)  = 0.97104 +/- 0.00005  [0.97094  0.97113]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  168 / 240  Source neutrons : 496314
+
+Running time :                  0:49:31
+Estimated running time :        1:06:37
+Estimated running time left :   0:17:06
+
+Estimated relative CPU usage :   781.4%
+
+k-eff (analog)    = 0.97091 +/- 0.00014  [0.97063  0.97119]
+k-eff (implicit)  = 0.97104 +/- 0.00005  [0.97095  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  169 / 240  Source neutrons : 502881
+
+Running time :                  0:49:45
+Estimated running time :        1:06:37
+Estimated running time left :   0:16:52
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97091 +/- 0.00014  [0.97063  0.97119]
+k-eff (implicit)  = 0.97104 +/- 0.00005  [0.97094  0.97113]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  170 / 240  Source neutrons : 498049
+
+Running time :                  0:49:59
+Estimated running time :        1:06:37
+Estimated running time left :   0:16:37
+
+Estimated relative CPU usage :   780.8%
+
+k-eff (analog)    = 0.97090 +/- 0.00014  [0.97062  0.97118]
+k-eff (implicit)  = 0.97103 +/- 0.00005  [0.97094  0.97113]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  171 / 240  Source neutrons : 500763
+
+Running time :                  0:50:13
+Estimated running time :        1:06:37
+Estimated running time left :   0:16:23
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97089 +/- 0.00014  [0.97061  0.97117]
+k-eff (implicit)  = 0.97103 +/- 0.00005  [0.97094  0.97113]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  172 / 240  Source neutrons : 503286
+
+Running time :                  0:50:28
+Estimated running time :        1:06:37
+Estimated running time left :   0:16:09
+
+Estimated relative CPU usage :   781.3%
+
+k-eff (analog)    = 0.97092 +/- 0.00014  [0.97064  0.97120]
+k-eff (implicit)  = 0.97103 +/- 0.00005  [0.97094  0.97113]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  173 / 240  Source neutrons : 498171
+
+Running time :                  0:50:42
+Estimated running time :        1:06:37
+Estimated running time left :   0:15:55
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97093 +/- 0.00014  [0.97065  0.97121]
+k-eff (implicit)  = 0.97103 +/- 0.00005  [0.97094  0.97112]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  174 / 240  Source neutrons : 500827
+
+Running time :                  0:50:56
+Estimated running time :        1:06:37
+Estimated running time left :   0:15:40
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97095 +/- 0.00014  [0.97067  0.97123]
+k-eff (implicit)  = 0.97103 +/- 0.00005  [0.97094  0.97112]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  175 / 240  Source neutrons : 497890
+
+Running time :                  0:51:10
+Estimated running time :        1:06:37
+Estimated running time left :   0:15:26
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97094 +/- 0.00014  [0.97066  0.97122]
+k-eff (implicit)  = 0.97103 +/- 0.00005  [0.97094  0.97112]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  176 / 240  Source neutrons : 500064
+
+Running time :                  0:51:24
+Estimated running time :        1:06:36
+Estimated running time left :   0:15:12
+
+Estimated relative CPU usage :   781.4%
+
+k-eff (analog)    = 0.97094 +/- 0.00014  [0.97066  0.97122]
+k-eff (implicit)  = 0.97103 +/- 0.00005  [0.97094  0.97112]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  177 / 240  Source neutrons : 501375
+
+Running time :                  0:51:39
+Estimated running time :        1:06:37
+Estimated running time left :   0:14:57
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97095 +/- 0.00014  [0.97067  0.97123]
+k-eff (implicit)  = 0.97103 +/- 0.00005  [0.97094  0.97112]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  178 / 240  Source neutrons : 499908
+
+Running time :                  0:51:53
+Estimated running time :        1:06:36
+Estimated running time left :   0:14:43
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97096 +/- 0.00014  [0.97068  0.97123]
+k-eff (implicit)  = 0.97104 +/- 0.00005  [0.97095  0.97113]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  179 / 240  Source neutrons : 498604
+
+Running time :                  0:52:07
+Estimated running time :        1:06:36
+Estimated running time left :   0:14:29
+
+Estimated relative CPU usage :   781.4%
+
+k-eff (analog)    = 0.97095 +/- 0.00014  [0.97068  0.97123]
+k-eff (implicit)  = 0.97104 +/- 0.00005  [0.97095  0.97113]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  180 / 240  Source neutrons : 500276
+
+Running time :                  0:52:21
+Estimated running time :        1:06:36
+Estimated running time left :   0:14:15
+
+Estimated relative CPU usage :   781.4%
+
+k-eff (analog)    = 0.97095 +/- 0.00014  [0.97067  0.97122]
+k-eff (implicit)  = 0.97104 +/- 0.00005  [0.97094  0.97113]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  181 / 240  Source neutrons : 498992
+
+Running time :                  0:52:35
+Estimated running time :        1:06:36
+Estimated running time left :   0:14:00
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97094 +/- 0.00014  [0.97066  0.97121]
+k-eff (implicit)  = 0.97103 +/- 0.00005  [0.97094  0.97113]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  182 / 240  Source neutrons : 499709
+
+Running time :                  0:52:49
+Estimated running time :        1:06:36
+Estimated running time left :   0:13:46
+
+Estimated relative CPU usage :   780.7%
+
+k-eff (analog)    = 0.97092 +/- 0.00014  [0.97064  0.97119]
+k-eff (implicit)  = 0.97104 +/- 0.00005  [0.97094  0.97113]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  183 / 240  Source neutrons : 501321
+
+Running time :                  0:53:04
+Estimated running time :        1:06:36
+Estimated running time left :   0:13:32
+
+Estimated relative CPU usage :   781.1%
+
+k-eff (analog)    = 0.97092 +/- 0.00014  [0.97064  0.97119]
+k-eff (implicit)  = 0.97104 +/- 0.00005  [0.97095  0.97113]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  184 / 240  Source neutrons : 500371
+
+Running time :                  0:53:18
+Estimated running time :        1:06:36
+Estimated running time left :   0:13:18
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97092 +/- 0.00014  [0.97065  0.97119]
+k-eff (implicit)  = 0.97104 +/- 0.00005  [0.97095  0.97113]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  185 / 240  Source neutrons : 500834
+
+Running time :                  0:53:32
+Estimated running time :        1:06:36
+Estimated running time left :   0:13:03
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97093 +/- 0.00014  [0.97066  0.97120]
+k-eff (implicit)  = 0.97104 +/- 0.00005  [0.97095  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  186 / 240  Source neutrons : 498567
+
+Running time :                  0:53:46
+Estimated running time :        1:06:36
+Estimated running time left :   0:12:49
+
+Estimated relative CPU usage :   781.5%
+
+k-eff (analog)    = 0.97092 +/- 0.00014  [0.97065  0.97119]
+k-eff (implicit)  = 0.97105 +/- 0.00005  [0.97095  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  187 / 240  Source neutrons : 500324
+
+Running time :                  0:54:00
+Estimated running time :        1:06:36
+Estimated running time left :   0:12:35
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97092 +/- 0.00014  [0.97065  0.97119]
+k-eff (implicit)  = 0.97105 +/- 0.00005  [0.97096  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  188 / 240  Source neutrons : 500920
+
+Running time :                  0:54:15
+Estimated running time :        1:06:36
+Estimated running time left :   0:12:20
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97093 +/- 0.00014  [0.97066  0.97120]
+k-eff (implicit)  = 0.97105 +/- 0.00005  [0.97096  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  189 / 240  Source neutrons : 499280
+
+Running time :                  0:54:29
+Estimated running time :        1:06:36
+Estimated running time left :   0:12:06
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97093 +/- 0.00014  [0.97066  0.97120]
+k-eff (implicit)  = 0.97105 +/- 0.00005  [0.97096  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  190 / 240  Source neutrons : 499669
+
+Running time :                  0:54:43
+Estimated running time :        1:06:35
+Estimated running time left :   0:11:52
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97093 +/- 0.00013  [0.97066  0.97119]
+k-eff (implicit)  = 0.97105 +/- 0.00005  [0.97096  0.97113]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  191 / 240  Source neutrons : 499590
+
+Running time :                  0:54:57
+Estimated running time :        1:06:35
+Estimated running time left :   0:11:38
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97092 +/- 0.00013  [0.97066  0.97118]
+k-eff (implicit)  = 0.97105 +/- 0.00005  [0.97096  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  192 / 240  Source neutrons : 500060
+
+Running time :                  0:55:12
+Estimated running time :        1:06:35
+Estimated running time left :   0:11:23
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97091 +/- 0.00013  [0.97065  0.97118]
+k-eff (implicit)  = 0.97105 +/- 0.00005  [0.97096  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  193 / 240  Source neutrons : 500378
+
+Running time :                  0:55:26
+Estimated running time :        1:06:36
+Estimated running time left :   0:11:09
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97091 +/- 0.00013  [0.97065  0.97117]
+k-eff (implicit)  = 0.97105 +/- 0.00005  [0.97096  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  194 / 240  Source neutrons : 500148
+
+Running time :                  0:55:40
+Estimated running time :        1:06:36
+Estimated running time left :   0:10:55
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97091 +/- 0.00013  [0.97065  0.97117]
+k-eff (implicit)  = 0.97104 +/- 0.00005  [0.97095  0.97113]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  195 / 240  Source neutrons : 501348
+
+Running time :                  0:55:54
+Estimated running time :        1:06:36
+Estimated running time left :   0:10:41
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97092 +/- 0.00013  [0.97066  0.97118]
+k-eff (implicit)  = 0.97104 +/- 0.00005  [0.97095  0.97113]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  196 / 240  Source neutrons : 498291
+
+Running time :                  0:56:09
+Estimated running time :        1:06:36
+Estimated running time left :   0:10:26
+
+Estimated relative CPU usage :   781.5%
+
+k-eff (analog)    = 0.97092 +/- 0.00013  [0.97066  0.97118]
+k-eff (implicit)  = 0.97104 +/- 0.00005  [0.97095  0.97113]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  197 / 240  Source neutrons : 501738
+
+Running time :                  0:56:23
+Estimated running time :        1:06:36
+Estimated running time left :   0:10:12
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97093 +/- 0.00013  [0.97067  0.97119]
+k-eff (implicit)  = 0.97104 +/- 0.00005  [0.97095  0.97113]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  198 / 240  Source neutrons : 498192
+
+Running time :                  0:56:37
+Estimated running time :        1:06:36
+Estimated running time left :   0:09:58
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97093 +/- 0.00013  [0.97067  0.97118]
+k-eff (implicit)  = 0.97104 +/- 0.00005  [0.97095  0.97113]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  199 / 240  Source neutrons : 499960
+
+Running time :                  0:56:51
+Estimated running time :        1:06:36
+Estimated running time left :   0:09:44
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97092 +/- 0.00013  [0.97067  0.97118]
+k-eff (implicit)  = 0.97104 +/- 0.00005  [0.97095  0.97113]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  200 / 240  Source neutrons : 500235
+
+Running time :                  0:57:06
+Estimated running time :        1:06:36
+Estimated running time left :   0:09:29
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97092 +/- 0.00013  [0.97066  0.97117]
+k-eff (implicit)  = 0.97104 +/- 0.00005  [0.97096  0.97113]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  201 / 240  Source neutrons : 501006
+
+Running time :                  0:57:20
+Estimated running time :        1:06:36
+Estimated running time left :   0:09:15
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97092 +/- 0.00013  [0.97067  0.97118]
+k-eff (implicit)  = 0.97105 +/- 0.00005  [0.97096  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  202 / 240  Source neutrons : 499640
+
+Running time :                  0:57:34
+Estimated running time :        1:06:36
+Estimated running time left :   0:09:01
+
+Estimated relative CPU usage :   780.7%
+
+k-eff (analog)    = 0.97093 +/- 0.00013  [0.97067  0.97118]
+k-eff (implicit)  = 0.97105 +/- 0.00005  [0.97096  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  203 / 240  Source neutrons : 499235
+
+Running time :                  0:57:48
+Estimated running time :        1:06:36
+Estimated running time left :   0:08:47
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97092 +/- 0.00013  [0.97067  0.97117]
+k-eff (implicit)  = 0.97105 +/- 0.00004  [0.97096  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  204 / 240  Source neutrons : 500643
+
+Running time :                  0:58:03
+Estimated running time :        1:06:36
+Estimated running time left :   0:08:32
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97092 +/- 0.00013  [0.97067  0.97117]
+k-eff (implicit)  = 0.97106 +/- 0.00004  [0.97097  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  205 / 240  Source neutrons : 500279
+
+Running time :                  0:58:17
+Estimated running time :        1:06:36
+Estimated running time left :   0:08:18
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97093 +/- 0.00013  [0.97068  0.97118]
+k-eff (implicit)  = 0.97105 +/- 0.00005  [0.97096  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  206 / 240  Source neutrons : 499117
+
+Running time :                  0:58:31
+Estimated running time :        1:06:36
+Estimated running time left :   0:08:04
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97092 +/- 0.00013  [0.97068  0.97117]
+k-eff (implicit)  = 0.97105 +/- 0.00004  [0.97096  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  207 / 240  Source neutrons : 499953
+
+Running time :                  0:58:45
+Estimated running time :        1:06:36
+Estimated running time left :   0:07:50
+
+Estimated relative CPU usage :   781.9%
+
+k-eff (analog)    = 0.97092 +/- 0.00013  [0.97067  0.97117]
+k-eff (implicit)  = 0.97105 +/- 0.00004  [0.97096  0.97113]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  208 / 240  Source neutrons : 501596
+
+Running time :                  0:59:00
+Estimated running time :        1:06:36
+Estimated running time left :   0:07:35
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97093 +/- 0.00013  [0.97068  0.97118]
+k-eff (implicit)  = 0.97105 +/- 0.00004  [0.97096  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  209 / 240  Source neutrons : 499142
+
+Running time :                  0:59:14
+Estimated running time :        1:06:35
+Estimated running time left :   0:07:21
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97093 +/- 0.00013  [0.97069  0.97118]
+k-eff (implicit)  = 0.97105 +/- 0.00004  [0.97096  0.97113]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  210 / 240  Source neutrons : 501033
+
+Running time :                  0:59:28
+Estimated running time :        1:06:35
+Estimated running time left :   0:07:07
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97095 +/- 0.00013  [0.97070  0.97119]
+k-eff (implicit)  = 0.97105 +/- 0.00004  [0.97096  0.97113]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  211 / 240  Source neutrons : 498464
+
+Running time :                  0:59:42
+Estimated running time :        1:06:35
+Estimated running time left :   0:06:53
+
+Estimated relative CPU usage :   781.9%
+
+k-eff (analog)    = 0.97094 +/- 0.00012  [0.97070  0.97119]
+k-eff (implicit)  = 0.97105 +/- 0.00004  [0.97096  0.97113]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  212 / 240  Source neutrons : 502159
+
+Running time :                  0:59:56
+Estimated running time :        1:06:35
+Estimated running time left :   0:06:38
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97096 +/- 0.00013  [0.97071  0.97121]
+k-eff (implicit)  = 0.97105 +/- 0.00004  [0.97096  0.97113]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  213 / 240  Source neutrons : 497769
+
+Running time :                  1:00:11
+Estimated running time :        1:06:35
+Estimated running time left :   0:06:24
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97096 +/- 0.00012  [0.97071  0.97120]
+k-eff (implicit)  = 0.97105 +/- 0.00004  [0.97097  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  214 / 240  Source neutrons : 499960
+
+Running time :                  1:00:25
+Estimated running time :        1:06:35
+Estimated running time left :   0:06:10
+
+Estimated relative CPU usage :   780.8%
+
+k-eff (analog)    = 0.97095 +/- 0.00012  [0.97071  0.97120]
+k-eff (implicit)  = 0.97105 +/- 0.00004  [0.97097  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  215 / 240  Source neutrons : 500561
+
+Running time :                  1:00:39
+Estimated running time :        1:06:35
+Estimated running time left :   0:05:56
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97096 +/- 0.00012  [0.97071  0.97120]
+k-eff (implicit)  = 0.97106 +/- 0.00004  [0.97097  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  216 / 240  Source neutrons : 499685
+
+Running time :                  1:00:53
+Estimated running time :        1:06:35
+Estimated running time left :   0:05:41
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97095 +/- 0.00012  [0.97071  0.97120]
+k-eff (implicit)  = 0.97106 +/- 0.00004  [0.97097  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  217 / 240  Source neutrons : 502097
+
+Running time :                  1:01:08
+Estimated running time :        1:06:35
+Estimated running time left :   0:05:27
+
+Estimated relative CPU usage :   780.8%
+
+k-eff (analog)    = 0.97097 +/- 0.00012  [0.97073  0.97121]
+k-eff (implicit)  = 0.97106 +/- 0.00004  [0.97098  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  218 / 240  Source neutrons : 497384
+
+Running time :                  1:01:22
+Estimated running time :        1:06:35
+Estimated running time left :   0:05:13
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97097 +/- 0.00012  [0.97072  0.97121]
+k-eff (implicit)  = 0.97106 +/- 0.00004  [0.97098  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  219 / 240  Source neutrons : 500095
+
+Running time :                  1:01:36
+Estimated running time :        1:06:35
+Estimated running time left :   0:04:59
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97096 +/- 0.00012  [0.97072  0.97120]
+k-eff (implicit)  = 0.97106 +/- 0.00004  [0.97098  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  220 / 240  Source neutrons : 499086
+
+Running time :                  1:01:50
+Estimated running time :        1:06:35
+Estimated running time left :   0:04:44
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97095 +/- 0.00012  [0.97071  0.97119]
+k-eff (implicit)  = 0.97106 +/- 0.00004  [0.97097  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  221 / 240  Source neutrons : 502719
+
+Running time :                  1:02:04
+Estimated running time :        1:06:35
+Estimated running time left :   0:04:30
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97096 +/- 0.00012  [0.97072  0.97120]
+k-eff (implicit)  = 0.97106 +/- 0.00004  [0.97098  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  222 / 240  Source neutrons : 498916
+
+Running time :                  1:02:19
+Estimated running time :        1:06:35
+Estimated running time left :   0:04:16
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97096 +/- 0.00012  [0.97072  0.97120]
+k-eff (implicit)  = 0.97106 +/- 0.00004  [0.97097  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  223 / 240  Source neutrons : 496979
+
+Running time :                  1:02:33
+Estimated running time :        1:06:35
+Estimated running time left :   0:04:02
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97093 +/- 0.00012  [0.97069  0.97118]
+k-eff (implicit)  = 0.97106 +/- 0.00004  [0.97098  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  224 / 240  Source neutrons : 504375
+
+Running time :                  1:02:47
+Estimated running time :        1:06:35
+Estimated running time left :   0:03:47
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97095 +/- 0.00012  [0.97070  0.97119]
+k-eff (implicit)  = 0.97106 +/- 0.00004  [0.97097  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  225 / 240  Source neutrons : 498107
+
+Running time :                  1:03:01
+Estimated running time :        1:06:35
+Estimated running time left :   0:03:33
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97094 +/- 0.00012  [0.97070  0.97119]
+k-eff (implicit)  = 0.97106 +/- 0.00004  [0.97098  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  226 / 240  Source neutrons : 500439
+
+Running time :                  1:03:16
+Estimated running time :        1:06:35
+Estimated running time left :   0:03:19
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97094 +/- 0.00012  [0.97070  0.97119]
+k-eff (implicit)  = 0.97106 +/- 0.00004  [0.97098  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  227 / 240  Source neutrons : 499477
+
+Running time :                  1:03:30
+Estimated running time :        1:06:35
+Estimated running time left :   0:03:05
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97094 +/- 0.00012  [0.97070  0.97118]
+k-eff (implicit)  = 0.97106 +/- 0.00004  [0.97098  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  228 / 240  Source neutrons : 499169
+
+Running time :                  1:03:44
+Estimated running time :        1:06:35
+Estimated running time left :   0:02:50
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97093 +/- 0.00012  [0.97069  0.97117]
+k-eff (implicit)  = 0.97106 +/- 0.00004  [0.97098  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  229 / 240  Source neutrons : 501391
+
+Running time :                  1:03:58
+Estimated running time :        1:06:35
+Estimated running time left :   0:02:36
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97093 +/- 0.00012  [0.97069  0.97117]
+k-eff (implicit)  = 0.97106 +/- 0.00004  [0.97097  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  230 / 240  Source neutrons : 499944
+
+Running time :                  1:04:12
+Estimated running time :        1:06:35
+Estimated running time left :   0:02:22
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97093 +/- 0.00012  [0.97069  0.97117]
+k-eff (implicit)  = 0.97106 +/- 0.00004  [0.97098  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  231 / 240  Source neutrons : 498295
+
+Running time :                  1:04:27
+Estimated running time :        1:06:35
+Estimated running time left :   0:02:08
+
+Estimated relative CPU usage :   781.4%
+
+k-eff (analog)    = 0.97091 +/- 0.00012  [0.97067  0.97115]
+k-eff (implicit)  = 0.97106 +/- 0.00004  [0.97098  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  232 / 240  Source neutrons : 502592
+
+Running time :                  1:04:41
+Estimated running time :        1:06:35
+Estimated running time left :   0:01:53
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97092 +/- 0.00012  [0.97068  0.97116]
+k-eff (implicit)  = 0.97106 +/- 0.00004  [0.97098  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  233 / 240  Source neutrons : 499252
+
+Running time :                  1:04:55
+Estimated running time :        1:06:35
+Estimated running time left :   0:01:39
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97092 +/- 0.00012  [0.97069  0.97116]
+k-eff (implicit)  = 0.97106 +/- 0.00004  [0.97098  0.97114]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  234 / 240  Source neutrons : 499646
+
+Running time :                  1:05:09
+Estimated running time :        1:06:35
+Estimated running time left :   0:01:25
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97092 +/- 0.00012  [0.97068  0.97116]
+k-eff (implicit)  = 0.97107 +/- 0.00004  [0.97099  0.97115]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  235 / 240  Source neutrons : 500275
+
+Running time :                  1:05:24
+Estimated running time :        1:06:35
+Estimated running time left :   0:01:11
+
+Estimated relative CPU usage :   781.7%
+
+k-eff (analog)    = 0.97092 +/- 0.00012  [0.97069  0.97116]
+k-eff (implicit)  = 0.97107 +/- 0.00004  [0.97098  0.97115]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  236 / 240  Source neutrons : 499778
+
+Running time :                  1:05:38
+Estimated running time :        1:06:35
+Estimated running time left :   0:00:56
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97092 +/- 0.00012  [0.97069  0.97116]
+k-eff (implicit)  = 0.97107 +/- 0.00004  [0.97099  0.97115]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  237 / 240  Source neutrons : 499327
+
+Running time :                  1:05:52
+Estimated running time :        1:06:35
+Estimated running time left :   0:00:42
+
+Estimated relative CPU usage :   781.6%
+
+k-eff (analog)    = 0.97091 +/- 0.00012  [0.97068  0.97115]
+k-eff (implicit)  = 0.97107 +/- 0.00004  [0.97098  0.97115]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  238 / 240  Source neutrons : 500419
+
+Running time :                  1:06:06
+Estimated running time :        1:06:35
+Estimated running time left :   0:00:28
+
+Estimated relative CPU usage :   781.1%
+
+k-eff (analog)    = 0.97091 +/- 0.00012  [0.97068  0.97114]
+k-eff (implicit)  = 0.97107 +/- 0.00004  [0.97099  0.97115]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  239 / 240  Source neutrons : 501544
+
+Running time :                  1:06:21
+Estimated running time :        1:06:35
+Estimated running time left :   0:00:14
+
+Estimated relative CPU usage :   781.8%
+
+k-eff (analog)    = 0.97092 +/- 0.00012  [0.97069  0.97115]
+k-eff (implicit)  = 0.97107 +/- 0.00004  [0.97099  0.97115]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 2.1.32 -- Static criticality source simulation
+
+Title: "sphMCFR radius 310, reflector 410" 
+
+Active cycle  240 / 240  Source neutrons : 498984
+
+Running time :                  1:06:35
+Estimated running time :        1:06:35
+Estimated running time left :   0:00:00
+
+Estimated relative CPU usage :   781.9%
+
+k-eff (analog)    = 0.97092 +/- 0.00012  [0.97069  0.97115]
+k-eff (implicit)  = 0.97107 +/- 0.00004  [0.97099  0.97115]
+
+(O4) (MPI=1) (OMP=8) 
+------------------------------------------------------------
+
+Transport cycle completed in 1.11 hours.
+
+Calculating activities...
+OK.
+
