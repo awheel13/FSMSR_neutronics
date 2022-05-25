@@ -1,0 +1,183 @@
+set title "sphMCFR radius 355, reflector 455"
+
+%______________surface definitions__________________________________
+surf 1   sph  0.0 0.0 0.0 355      % fuel salt radius
+surf 2   sph  0.0 0.0 0.0 455   % reflector
+
+%______________cell definitions_____________________________________
+cell 11  0  fuelsalt  -1      % fuel salt
+cell 31  0  refl       1 -2   % reflector
+cell 99  0  outside    2      % graveyard
+
+% Fuel salt: 58%NaCl + 42%UCl3, U enrichment 0.11124999999999999
+mat fuelsalt  -3.46981237 rgb 240 30 30 burn 1 tmp  900.000
+ 11023.09c  -0.073591611936    %  Na-23
+ 17035.09c  -0.000003551116    %  Cl-35
+ 17037.09c  -0.375388102695    %  Cl-37
+ 92234.09c  -0.000537151611    %  U-234
+ 92235.09c  -0.060612759936    %  U-235
+ 92236.09c  -0.000280006871    %  U-236
+ 92238.09c  -0.489586815834    %  U-238
+
+% Cast iron reflector
+mat refl   -7.034 tmp 873.0 rgb 128 128 178
+  6000.06c -0.034000
+%14000.06c -0.026000
+ 14028.06c  -2.38853E-02
+ 14029.06c  -1.25674E-03
+ 14030.06c  -8.57970E-04
+ 15031.06c -0.003000
+%16000.06c -0.001000
+ 16032.06c  -9.47153E-04
+ 16033.06c  -7.71207E-06
+ 16034.06c  -4.50224E-05
+ 16036.06c  -1.12170E-07
+ 25055.06c -0.006500
+%26000.06c -0.929500
+ 26054.06c  -5.24755E-02
+ 26056.06c  -8.54225E-01
+ 26057.06c  -2.00806E-02
+ 26058.06c  -2.71920E-03
+%
+%pure iron
+%26054.06c  -0.058450   %  Fe
+%26056.06c  -0.917540   %  Fe
+%26057.06c  -0.021190   %  Fe
+%26058.06c  -0.002820   %  Fe
+
+% Fuel salt volume
+set mvol fuelsalt 0 374803522.74632543
+
+% Power in thermal W
+set power 3000000000.0
+
+% Boundary condition
+set bc 1
+
+% Analog reaction rate
+% set arr 2
+
+% Neutron population and criticality cycles
+set pop 10000 240 40
+
+
+% Turning off group constant generation hastens the calculation
+set gcu -1
+
+% Data Libraries
+set acelib "/opt/JEFF-3.3/sss_jeff33.xsdir"
+set declib "/opt/JEFF-3.3/jeff33.dec"
+set nfylib "/opt/JEFF-3.3/jeff33.nfy"
+
+%___________Reprocessing___________
+% First we need some extra materials to do depletion with reprocessing correctly.
+
+% stockpile of extra refuel
+mat U_stock -3.46981237 burn 1 vol 1e8 tmp 900.0
+ 11023.09c  -0.073534781494    %  Na-23
+ 17035.09c  -0.000003548374    %  Cl-35
+ 17037.09c  -0.375098212702    %  Cl-37
+ 92234.09c  -0.000009649201    %  U-234
+ 92235.09c  -0.001088826109    %  U-235
+ 92236.09c  -0.000005029944    %  U-236
+ 92238.09c  -0.550259952176    %  U-238
+
+
+% tanks for offgases
+mat offgastankcore 0.0007 burn 1 vol 1e6 tmp 900.0
+2004.09c 1
+
+% overflow tank
+mat overflow 0.0007 burn 1 vol 1e8 tmp 900.0
+2004.09c 1
+
+% mass flow definitions
+mflow U_in
+all 0
+
+mflow offgasratecore
+Ne 5e-2
+Ar 5e-2
+He 5e-2
+Kr 5e-2
+Xe 5e-2
+Rn 5e-2
+
+mflow noblemetal
+Se 5e-2
+Nb 5e-2
+Mo 5e-2
+Tc 5e-2
+Ru 5e-2
+Rh 5e-2
+Pd 5e-2
+Ag 5e-2
+Sb 5e-2
+Te 5e-2
+
+% need to account for the increase in volume with refueling
+mflow over
+all 0
+
+% predictor-corrector must be turned off to use depletion
+set pcc 0
+% dumps depletion matrices if needed. should be one per burnt material.
+% set depmtx 1
+
+%syntax:
+% rc <from_mat> <to_mat> <mflow> <setting> where setting is either 0, 1 or 2.
+
+rep source_rep
+rc U_stock fuelsalt U_in 0
+rc fuelsalt offgastankcore offgasratecore 1
+rc fuelsalt overflow noblemetal 1
+rc fuelsalt overflow over 1
+
+% Depletion cards
+set inventory
+actinides
+
+set rfw 1
+
+dep
+pro source_rep
+daystep
+0.05 0.15 0.3 0.5   % 1 day
+1 2 3               % 1 week
+7 7 7 14 14 14 14 28 28 28 28 42 42 42 44  % 1 year, 366 days
+52 52 52 52 52 52 53    % 365
+52 52 52 52 52 52 53    % 365
+52 52 52 52 52 52 54    % 366
+52 52 52 52 52 52 53    % 365
+52 52 52 52 52 52 53    % 365
+52 52 52 52 52 52 54    % 366
+52 52 52 52 52 52 53    % 365
+52 52 52 52 52 52 53    % 365
+52 52 52 52 52 52 53    % 365
+120 120 126 120 120 125 120 120 125 120 120 125
+120 120 126 120 120 125 120 120 125 120 120 125
+120 120 126 120 120 125
+120 120 126 120 120 125 120 120 125 120 120 125
+120 120 126 120 120 125 120 120 125 120 120 125
+120 120 126 120 120 125
+120 120 126 120 120 125 120 120 125 120 120 125
+120 120 126 120 120 125 120 120 125 120 120 125
+120 120 126 120 120 125
+120 120 126 120 120 125 120 120 125 120 120 125
+120 120 126 120 120 125 120 120 125 120 120 125
+120 120 126 120 120 125
+120 120 126 120 120 125 120 120 125 120 120 125
+120 120 126 120 120 125 120 120 125 120 120 125
+120 120 126 120 120 125
+120 120 126 120 120 125 120 120 125 120 120 125
+120 120 126 120 120 125 120 120 125 120 120 125
+120 120 126 120 120 125
+120 120 126 120 120 125 120 120 125 120 120 125
+120 120 126 120 120 125 120 120 125 120 120 125
+120 120 126 120 120 125
+120 120 126 120 120 125 120 120 125 120 120 125
+120 120 126 120 120 125 120 120 125 120 120 125
+120 120 126 120 120 125
+120 120 126 120 120 125 120 120 125 120 120 125
+120 120 126 120 120 125 120 120 125 120 120 125
+120 120 126 120 120 125
